@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import Ipsum from './Ipsum.vue';
+import Ipsum from './Ipsums.vue';
 
 export default {
   props: {

@@ -2,6 +2,7 @@
   <div id="app">
     <Header />
     <IpsumList :ipsums="ipsums"/>
+    <Ipsum />
   </div>
 </template>
 
@@ -9,6 +10,7 @@
 import data from '../data.js';
 import Header from './components/Header.vue';
 import IpsumList from './components/IpsumList.vue';
+import Ipsum from './components/Ipsum';
 
 export default {
   name: 'app',
@@ -21,7 +23,8 @@ export default {
 
   components: {
     Header,
-    IpsumList
+    IpsumList,
+    Ipsum
   }
 };
 </script>

@@ -1,24 +1,19 @@
 <template>
-    <li>
-      <h3>{{ipsum.title}}</h3>
-      <p>{{ipsum.author}} | 
-        <a v-bind:href="ipsum.authorUrl">website</a>
-        | {{ipsum.category}}</p>
-    </li>
+    <div>
+        <p> this is the container for the detail component</p>
+        <IpsumDetail />
+    </div>
 </template>
 
 <script>
+import IpsumDetail from './IpsumDetail.vue';
 export default {
-  props: {
-    ipsum: Object
+  components: {
+    IpsumDetail
   }
 };
 </script>
 
 <style>
-li {
-  list-style: none;
-  text-align: center;
-  border: 1px navy solid;
-}
+
 </style>
