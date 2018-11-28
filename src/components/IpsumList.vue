@@ -1,16 +1,16 @@
 <template>
     <ul>
-        <li v-bind:key="ipsum.author" v-for="ipsum in ipsums"></li>
+        <li v-bind:key="ipsum.author" v-for="ipsum in ipsums">
+            <p>Author: {{ipsum.author}}</p>
+            <p>Title: {{ipsum.title}}</p>
+        </li>
     </ul>
 </template>
 
 <script>
-
-import ipsumApi from '../ipsumApi.js';
-
 export default {
     props: {
-        ipsums: ipsumApi.getAll()
+        ipsums: Array
     }
 };
 </script>
