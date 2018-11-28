@@ -7,7 +7,7 @@
 
 <script>
 import Header from './components/Header.vue';
-import IpsumList from './components/IpsumList.vue'
+import IpsumList from './components/IpsumList.vue';
 
 export default {
   name: 'app',
@@ -15,7 +15,7 @@ export default {
     Header,
     IpsumList
   }
-}
+};
 </script>
 
 <style>

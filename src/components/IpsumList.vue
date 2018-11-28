@@ -8,10 +8,10 @@
 import Ipsum from './Ipsum.vue';
 // import Ipsum from '../../data.js';
 export default {
-    components: {
-        Ipsum
-    }
-}
+  components: {
+    Ipsum
+  }
+};
 </script>
 
 <style>
