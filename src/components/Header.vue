@@ -16,7 +16,6 @@ export default {
     color: rgb(35, 35, 35);
     margin: 0;
     padding: 20px;
-    border: 1px navy solid;
 }
 h1 {
     text-transform: uppercase;

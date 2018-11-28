@@ -20,5 +20,14 @@ export default {
 </script>
 
 <style>
-
+ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-column-gap: 10px;
+    grid-row-gap: 30px;
+    margin: 0;
+    padding: 0;
+    max-height: 30vh;
+    overflow-y: auto;
+}
 </style>
