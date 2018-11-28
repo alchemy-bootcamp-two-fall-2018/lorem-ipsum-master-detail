@@ -1,6 +1,7 @@
 <template>
     <li>
-        {{ipsum.title}}
+        <strong>{{ipsum.title}}</strong>
+        {{ipsum.category}}
     </li>
 </template>
 
