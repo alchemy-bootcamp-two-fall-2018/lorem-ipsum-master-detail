@@ -2,7 +2,10 @@
     <div id="ipsums-container">
         <h2>Ipsums</h2>
         <Ipsum/>
-        <IpsumList/>
+        <IpsumList
+        :ipsums="ipsums"
+        :onSelect="handleSelect"
+        />
     </div>
 </template>
 
@@ -13,6 +16,9 @@ export default {
     components: {
         IpsumList,
         Ipsum
+    },
+    props: {
+        ipsums: Array,
     }
 }
 </script>
