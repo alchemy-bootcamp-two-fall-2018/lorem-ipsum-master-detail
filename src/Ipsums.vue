@@ -1,11 +1,24 @@
 <template>
-    
+    <ul>
+        <p>{{ipsums}}</p>
+        <!-- <ipsum v-for="ipsum in ipsums"
+            :key="ipsum.title"
+            :ipsum="ipsum" -->
+        <!-- /> -->
+    </ul>
+   
 </template>
 
 <script>
-export default {
+import ipsums from '../data.js';
 
-}
+export default {
+    data() {
+        return {
+            ipsums
+        };
+    }
+};
 </script>
 
 <style>
