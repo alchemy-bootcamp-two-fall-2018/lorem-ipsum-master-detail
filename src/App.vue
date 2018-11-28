@@ -1,18 +1,20 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png" style="height:50px"/>
-    <Header msg="Lorem Ipsum Lab"/>
+    <Header />
+    <Ipsums />
   </div>
 </template>
 
 <script>
 import Header from './components/Header.vue';
+import Ipsums from './components/Ipsums.vue';
 
 export default {
-  name: 'app',
-  components: {
-    Header
-  }
+    components: {
+        Header,
+        Ipsums
+    }
 };
 </script>
 
