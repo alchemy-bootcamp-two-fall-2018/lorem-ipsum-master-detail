@@ -2,7 +2,8 @@
     <section>
         <IpsumList :ipsums="ipsums"
                     :onSelect="handleSelect"/>
-        <IpsumDetail v-if="ipsum" :ipsum="ipsum" />
+        <Ipsum v-if="ipsum"
+                :ipsum="ipsum"/>
         <p v-else>Click on an author!</p>
     </section>
 </template>
@@ -11,7 +12,7 @@
 
 import ipsumApi from '../ipsumApi.js';
 import IpsumList from './IpsumList.vue';
-import IpsumDetail from './IpsumDetail.vue';
+import Ipsum from './Ipsum.vue';
 
 export default {
     data() {
@@ -22,12 +23,11 @@ export default {
     },
     components: {
         IpsumList,
-        IpsumDetail
+        Ipsum
     },
     methods: {
         handleSelect(ipsum) {
             this.ipsum = ipsum;
-            console.log(ipsum);
         }
     }
 };
