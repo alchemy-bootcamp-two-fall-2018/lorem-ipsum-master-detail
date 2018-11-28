@@ -1,23 +1,16 @@
 <template>
   <div id="app">
     <Header/>
-    <ipsums-list
-    v-bind:Ipsums="data"/>
+    <ipsums-list/>
   </div>
 </template>
 
 <script>
-import dataApi from '../dataApi.js';
 import Header from './components/Header.vue';
 import IpsumsList from './components/Ipsums.vue';
 
 
 export default {
-    data() {
-        return {
-            data: dataApi.getData(),
-        };
-    },
 
     components: {
         Header,
