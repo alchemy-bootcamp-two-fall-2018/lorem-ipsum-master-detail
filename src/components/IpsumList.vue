@@ -1,13 +1,18 @@
 <template>
     <ul>
-        <Ipsum />
+        <Ipsum v-for="ipsum in ipsums"
+        :key="ipsum.title"
+        :ipsum="ipsum"/>
     </ul>
 </template>
 
 <script>
 import Ipsum from './Ipsum.vue';
-// import Ipsum from '../../data.js';
+
 export default {
+  props: {
+    ipsums: Array
+  },
   components: {
     Ipsum
   }
