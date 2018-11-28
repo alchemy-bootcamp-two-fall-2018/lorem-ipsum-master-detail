@@ -13,11 +13,15 @@ export default {
 
 <style>
     header {
-        display: flex;
-        justify-content: flex-start;
-        padding: 20px;
-        height: 50px;
+        padding: 10px;
         background: steelblue;
         color: white;
+    }
+    img {
+        float: left;
+        width: 90px;
+    }
+    h1 {
+        margin-left: 10px;
     }
 </style>
