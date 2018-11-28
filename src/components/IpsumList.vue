@@ -1,9 +1,9 @@
 <template>
-        <ul>
+    <ul>
         <IpsumItem v-for="ipsum in ipsumdata"
         v-bind:key="ipsum.title"
-        v-bind:ipsum="ipsum"/>
-        @click="onSelect(ipsum)">
+        v-bind:ipsum="ipsum"
+        @click.native="onSelect(ipsum)"/>
     </ul>
 </template>
 
@@ -17,8 +17,7 @@ export default {
     ipsumdata: Array,
     selected: Object,
     onSelect: Function
-  }
-    
+  }    
 };
 </script>
 

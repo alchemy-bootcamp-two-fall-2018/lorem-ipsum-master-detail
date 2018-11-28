@@ -1,6 +1,7 @@
 <template>
     <div>
-        I'm an Ipsum
+        I'm an Ipsum - I control whether you show details or form
+        <IpsumDetail/>
     </div>
 </template>
 
