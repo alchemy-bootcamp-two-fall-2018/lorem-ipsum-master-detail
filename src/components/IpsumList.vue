@@ -1,9 +1,11 @@
 <template>
-    <div id="ipsumList-container">
-        <h2>IpsumList</h2>
-        <p>{{ipsums[0].title}}</p>
-        <IpsumItem/>
-    </div>
+    <ul id="ipsumList">
+        <IpsumItem v-for="ipsum in ipsums"
+        @click.native="onSelect(ipsum)"
+        :key="ipsum.title"
+        :ipsum="ipsum"
+        />
+    </ul>
 </template>
 
 <script>
