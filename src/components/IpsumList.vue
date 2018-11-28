@@ -1,6 +1,8 @@
 <template>
     <ul>
-        <li v-bind:key="ipsum.author" v-for="ipsum in ipsums">
+        <li :key="ipsum.author"
+            v-for="ipsum in ipsums"
+            @click="onSelect(ipsum)">
             <p><img v-bind:src="imageSrc"></p>
             <p>Author: {{ipsum.author}}</p>
             <p>Title: {{ipsum.title}}</p>
@@ -16,7 +18,8 @@ export default {
         };
     },
     props: {
-        ipsums: Array
+        ipsums: Array,
+        onSelect: Function
     }
 };
 </script>

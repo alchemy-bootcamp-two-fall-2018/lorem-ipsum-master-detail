@@ -17,5 +17,8 @@ export default {
 </script>
 
 <style>
-
+    h1, h2 {
+        display: inline;
+        margin: 2%;
+    }
 </style>

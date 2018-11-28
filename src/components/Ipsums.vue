@@ -1,6 +1,7 @@
 <template>
     <section>
-        <IpsumList :ipsums="ipsums"/>
+        <IpsumList :ipsums="ipsums"
+                    :onSelect="handleSelect"/>
     </section>
 </template>
 
@@ -17,6 +18,11 @@ export default {
     },
     components: {
         IpsumList
+    },
+    methods: {
+        handleSelect(ipsum) {
+            console.log(ipsum);
+        }
     }
 };
 </script>
