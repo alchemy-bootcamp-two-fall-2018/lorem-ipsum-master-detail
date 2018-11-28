@@ -1,10 +1,10 @@
 <template>
-    <p>IpsumDetail</p>
+    <h4>IpsumItem</h4>
 </template>
 
 <script>
 export default {
-    
+
 }
 </script>
 
