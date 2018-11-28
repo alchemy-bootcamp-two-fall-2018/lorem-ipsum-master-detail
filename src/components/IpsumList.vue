@@ -11,3 +11,6 @@ export default {
 <style>
 
 </style>
+
+// calls the passed onSelect when an ipsum is selected, passing the corresponding object to the onSelect function
+// show name and category

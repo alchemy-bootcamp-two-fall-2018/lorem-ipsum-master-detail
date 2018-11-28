@@ -11,3 +11,5 @@ export default {
 <style>
 
 </style>
+
+// gets passed the ipsum
