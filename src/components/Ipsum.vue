@@ -1,8 +1,6 @@
 <template>
     <div>
         I'm an Ipsum
-        <IpsumDetail/>
-        <IpsumDetail/>
     </div>
 </template>
 
