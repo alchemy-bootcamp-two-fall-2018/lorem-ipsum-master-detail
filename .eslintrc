@@ -52,5 +52,8 @@
         }
         ],
         "array-bracket-spacing": "error"
+    },
+    "settings": {
+        "html/xml-extensions": [".html"],
     }
 }
