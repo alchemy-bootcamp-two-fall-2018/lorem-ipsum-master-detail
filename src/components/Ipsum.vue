@@ -1,10 +1,11 @@
 <template>
     <div>
         <IpsumDetail :ipsum="ipsum" 
-                    :onEdit="handleEdit"/>
+                    :onEdit="handleEdit"
+                    v-if="detail"/>
         <IpsumForm v-if="edit"
                     :onUpdate="onUpdate"
-                    :onCancel="onCancel"/>
+                    :onCancel="handleCancel"/>
     </div>
 </template>
 
@@ -16,7 +17,8 @@ import IpsumForm from './IpsumForm';
 export default {
     data() {
         return {
-            edit: false
+            edit: false,
+            detail: true
         };
     },
     props: {
@@ -30,9 +32,11 @@ export default {
     },
     methods: {
         handleEdit() {
+            this.detail = false;
             this.edit = true;
         },
-        onCancel() {
+        handleCancel() {
+            this.detail = true;
             this.edit = false;
         }
     }
