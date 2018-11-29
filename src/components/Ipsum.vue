@@ -1,16 +1,20 @@
 <template>
     <div>
+        <IpsumForm />
         <IpsumDetail
         :ipsum="ipsum"/>
+        
     </div>
 </template>
 
 <script>
 import IpsumDetail from './IpsumDetail.vue';
+import IpsumForm from './IpsumForm.vue';
 
 export default {
   components: {
-    IpsumDetail
+    IpsumDetail,
+    IpsumForm
   },
   props: {
     ipsum: Object

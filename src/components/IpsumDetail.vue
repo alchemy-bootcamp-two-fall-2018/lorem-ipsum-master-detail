@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div v-if="ipsum">
         <h3> {{ ipsum.title }} - {{ ipsum.category }} category </h3>
         <h3> Author: {{ ipsum.author }} - published on {{ ipsum.publishedOn }}</h3>
         <h3> Example copy: </h3>

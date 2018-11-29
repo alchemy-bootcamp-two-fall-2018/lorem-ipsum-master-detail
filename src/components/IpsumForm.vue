@@ -1,37 +1,48 @@
 <template>
-    <form @submit.prevent="onAdd(ipsum)">
-    <label>
-      <span>Title:</span>
-      <input v-model="ipsum.title" required>
-    </label>
-    <label>
-      <span>Category: </span>
-      <input v-model="ipsum.category" required>
-    </label>
-   <label>
-      <span>Author: </span>
-      <input v-model="ipsum.author" required>
-    </label>
-    <label>
-      <span>Author URL: </span>
-      <input v-model="ipsum.authorUrl" required>
-    </label> 
-    <label>
-      <span>Published On: </span>
-      <input v-model="ipsum.publishedOn" required>
-    </label>
-    <label>
-      <span>Body Copy: </span>
-      <input v-model="ipsum.body" required>
-    </label>
-  </form>
+  <div>
+    <form>
+      <label>
+        <span>Title:</span>
+        <input>
+      </label>
+      <label>
+        <span>Category:</span>
+        <input>
+      </label>
+      <label>
+        <span>Author:</span>
+        <input>
+      </label>
+      <label>
+        <span>Author URL:</span>
+        <input>
+      </label>      
+      <label>
+        <span>Published On:</span>
+        <input>
+      </label>
+      <label>
+        <span>Body Copy:</span>
+        <input>
+      </label>
+      <label>
+        <span>
+          <button type="submit">Add</button>
+        </span>
+      </label>
+    </form>
+  </div>
 </template>
 
 <script>
 export default {
+
 };
 </script>
 
 <style>
-
+  span {
+    display: flex;
+    margin-top: 10px;
+  }
 </style>

@@ -23,7 +23,6 @@ export default {
     };
   },
   components:{
-    // Ipsum
     IpsumList,
     Ipsum
   },
