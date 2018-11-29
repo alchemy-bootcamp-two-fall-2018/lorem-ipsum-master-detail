@@ -1,31 +1,22 @@
 <template>
     <div>
         <p>{{ipsum.title}}</p>
+        <p>Topic: {{ipsum.category}}</p>
              
     </div>
 </template>
 
 <script>
-// import ipsum from '../../data.js';
-
 export default {
-    // data() {
-    //     return {
-    //         // ipsum
-    //     };
-    // }, 
-
     props: {
         ipsum: Object
-    },
-
-    // components: {
-    //     ipsum
-    // }
+    }
 };
-
 </script>
 
 <style>
-
+    div {
+         border: 1px solid black;
+         text-align: center;
+    }
 </style>
