@@ -1,11 +1,11 @@
 <template>
   <ul>
 
-      <h3>This is the IpsumList component</h3>
 
       <IpsumItem v-for="ipsum in ipsums"
-        v-bind:key="ipsum.title"
-        v-bind:ipsum="ipsum"
+        @click.native="onSelect(ipsum)"
+        :key="ipsum.title"
+        :ipsum="ipsum"
       />
         
   </ul>
@@ -16,14 +16,23 @@ import IpsumItem from './IpsumItem.vue'
 
 export default {
     props: {
-      ipsums: Array
+      ipsums: Array,
+      onSelect: Function
     },
     components: {
       IpsumItem
     }
-}
+};
 </script>
 
 <style>
-
+ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
 </style>
