@@ -1,7 +1,7 @@
 <template>
   <header>
-    <img src="../assets/loremLogo.jpg" alt="ipsum logo">
-    <div>Ipsum Catalog</div>
+    <img src="../assets/logo.png" alt="ipsum logo">
+    <span>Ipsum Catalog</span>
   </header>
 </template>
 
@@ -12,5 +12,7 @@ export default {
 </script>
 
 <style>
-
+header {
+  padding: 20px;
+}
 </style>
