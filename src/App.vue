@@ -28,6 +28,6 @@ export default {
   margin-top: 40px;
 }
 body {
-  background-image: url('https://images.unsplash.com/photo-1497897271578-5f45bb7a8400?ixlib=rb-0.3.5&s=604140e56a39d0ca58d53a799c7c3b5d&auto=format&fit=crop&w=800&q=60');
+  background-image: url('https://images.unsplash.com/photo-1524055697392-928c7665644d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b8aead7f7e8ee3879399c5628fb0066b&auto=format&fit=crop&w=1567&q=80');
 }
 </style>
