@@ -2,6 +2,7 @@
     <li>
         <div class="info">
             <h3>{{ ipsum.title }}</h3>
+            <p><b>Author:</b> {{ ipsum.author }}</p>
         </div>
     </li>
 </template>
@@ -15,5 +16,11 @@ export default {
 </script>
 
 <style>
+.info {
+    border: 1px solid red;
+}
 
+li {
+    list-style: none;
+}
 </style>

@@ -18,9 +18,6 @@ export default {
             ipsums: ipsumApi.getAll(),
         };
     },
-    // props: {
-    //     ipsums: Array
-    // },
     components: {
         Ipsum
     }
@@ -28,5 +25,9 @@ export default {
 </script>
 
 <style>
-
+ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    
+}
 </style>
