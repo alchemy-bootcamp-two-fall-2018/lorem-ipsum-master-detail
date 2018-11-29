@@ -3,18 +3,22 @@
         <ul>
         <Ipsum v-for="Ipsum in Ipsums"
             :key="Ipsum.author"
-            :Ipsum="Ipsum"/>
+            :Ipsum="Ipsum"
+            v-bind:class="{ Ipsum: true, selected: Ipsum === selected}"
+            v-on:click.native="onSelect(Ipsum)"
+            />
         </ul>
 
     </div>
 </template>
 
 <script>
-import Ipsum from './IpsumsDetails.vue';
+import Ipsum from './IpsumsItem.vue';
 
 export default {
     props: {
-        Ipsums: Array
+        Ipsums: Array,
+        onSelect: Function
     },
 
     components: {

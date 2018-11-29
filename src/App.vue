@@ -1,20 +1,20 @@
 <template>
   <div id="app">
     <Header/>
-    <ipsums-list/>
+    <Ipsums/>
   </div>
 </template>
 
 <script>
 import Header from './components/Header.vue';
-import IpsumsList from './components/Ipsums.vue';
+import Ipsums from './components/Ipsums.vue';
 
 
 export default {
 
     components: {
         Header,
-        IpsumsList
+        Ipsums
     }
 };
 </script>
