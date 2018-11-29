@@ -40,7 +40,9 @@ export default {
             this.ipsum = newIpsum;
         },
         handleUpdate(updateIpsum) {
-            console.log(updateIpsum);
+            let index = this.ipsums.indexOf(this.ipsum);
+            this.ipsums.splice(index, 1, updateIpsum);
+            this.ipsum = updateIpsum;
         },
         handleCancel() {
             console.log('cancel');
