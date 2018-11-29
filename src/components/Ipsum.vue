@@ -2,7 +2,6 @@
     <li>
         {{ipsum.title}}
         {{ipsum.category}}
-        {{ipsum.body}}
     </li>
 </template>
 
@@ -15,5 +14,11 @@ export default {
 </script>
 
 <style>
+li {
+    border: 1px solid;
+    display: grid;
+    list-style-type: none;
+    grid-template-columns: repeat (auto-fit, minmax,(150px, 1fr));
+}
 
 </style>

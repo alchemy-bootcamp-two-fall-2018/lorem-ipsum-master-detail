@@ -1,8 +1,7 @@
 <template>
   <div id="app">
     <Header/>
-    <Ipsums :ipsums="ipsums"
-    :onSelect="handleSelect"/> 
+    <Ipsums/>
   </div>
 </template>
 
@@ -14,13 +13,8 @@ export default {
   components: {
     Ipsums,
     Header
-  },
-  methods: {
-    handleSelect(ipsum) {
-      this.selected = ipsum;
-    }
   }
-};
+}
 
 </script>
 
@@ -32,5 +26,8 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+body {
+  background-color:cadetblue;
 }
 </style>

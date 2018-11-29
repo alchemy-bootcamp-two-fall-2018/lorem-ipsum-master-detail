@@ -1,26 +1,30 @@
 <template>
-    <ul>
-        <Ipsum :ipsums="ipsums"
-        :onSelect="handleSelect"
-        v-for="ipsum in ipsums"
-        @click.native="onSelect(ipsum)"
-        :key="ipsum.title"
-        :ipsum="ipsum"/>
-    </ul>
+    <div>
+        <Ipsum v-if="selected"
+        :ipsum="selected"/>
+
+        <IpsumList
+        :ipsums="ipsums"
+        :onSelect="handleSelect"/>
+
+    </div>
 </template>
 
 <script>
 import ipsumsApi from '../../data.js';
 import Ipsum from './Ipsum.vue';
+import IpsumList from './IpsumList.vue';
 
 export default {
     data() {
         return {
-            ipsums: ipsumsApi.getIpsums()
+            ipsums: ipsumsApi.getIpsums(),
+            selected: null
     };
   },
     components: {
     Ipsum,
+    IpsumList
   },
   methods: {
     handleSelect(ipsum) {
@@ -32,8 +36,5 @@ export default {
 </script>
 
 <style>
-ul {
-    display: grid;
-    gridp-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-}
+
 </style>
