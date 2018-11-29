@@ -3,7 +3,6 @@
       <IpsumList v-for="ipsum in ipsums"
         :key="ipsum.title"
         :ipsum="ipsum"/>
-    {{IpsumList}}
     </ul>
 </template>
 
@@ -24,5 +23,8 @@ export default {
 </script>
 
 <style>
-
+ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
 </style>
