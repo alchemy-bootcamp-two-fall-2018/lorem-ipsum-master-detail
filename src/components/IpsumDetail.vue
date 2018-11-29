@@ -3,7 +3,7 @@
   <div class="top">
       <h3>{{ ipsum.title }}</h3>
       <p>Author: {{ ipsum.author }}</p>
-      <p>Author: {{ ipsum.category }}</p>
+      <p>Category: {{ ipsum.category }}</p>
   </div>
 
   <div class="body"><span>Text</span>
