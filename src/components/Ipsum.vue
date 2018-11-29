@@ -1,10 +1,24 @@
 <template>
-    <header>Test</header>
+    <div>
+        <h1>HI</h1>
+        <IpsumDetail 
+            v-bind:key="ipsum.title"
+            v-bind:ipsum="ipsum"
+        />
+   </div>
 </template>
 
 <script>
-export default {
+import IpsumDetail from './IpsumDetail.vue';
 
+
+export default {
+    props: {
+        ipsum: Object
+    },
+    components: {
+        IpsumDetail
+    }
 };
 
 </script>
