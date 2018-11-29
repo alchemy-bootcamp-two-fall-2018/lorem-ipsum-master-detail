@@ -1,0 +1,39 @@
+<template>
+    
+    <ul>
+        <IpsumItem v-for="ipsum in ipsums"
+        v-bind:key="ipsum.title"
+        v-bind:ipsum="ipsum"/>  
+    </ul>
+    
+</template>
+
+<script>
+import IpsumItem from './IpsumItem.vue';
+
+export default {
+    data() {
+        return {
+        }
+    },
+    //child, who you'll be sending info to
+    components:{
+        IpsumItem,
+        
+
+    },
+    //parent, what's coming in to be used 
+    props: {
+        ipsums: Array,
+
+
+    }
+    
+
+
+}
+</script>
+
+<style>
+
+</style>
