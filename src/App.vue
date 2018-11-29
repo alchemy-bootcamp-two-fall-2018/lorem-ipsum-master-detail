@@ -1,19 +1,30 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Header/>
+    <h2>Do I Exist</h2>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ipsumApi from './services/ipsumApi.js';
+import Header from './components/Header.vue';
+import Ipsums from './components/Ipsums.vue';
+import IpsumDetail from './components/IpsumDetail.vue';
+import AddIpsum from './components/AddIpsum.vue';
 
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
-}
+  // data() {
+  //   return {
+  //     ipsums: ipsumApi.getIpsums(),
+  //     filter: {
+  //       weight: 0,
+
+  //     }
+  //   }
+
+  // }
+};
+
 </script>
 
 <style>

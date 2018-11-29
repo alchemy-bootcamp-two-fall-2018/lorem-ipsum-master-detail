@@ -170,7 +170,7 @@ const ipsums = [
 ];
 
 export default {
-  getAnimals() {
+  getIpsums() {
     console.log(ipsums);
     return ipsums;
   }
