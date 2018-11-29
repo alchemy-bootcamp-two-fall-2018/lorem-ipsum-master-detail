@@ -1,14 +1,16 @@
 <template>
     <header>
-        This is Ipsums
+        <ipsum/>
         <IpsumList
             v-bind:ipsums="ipsums"/>
     </header>
+
 </template>
 
 <script>
 import IpsumList from './IpsumList.vue';
 import ipsumsApi from '../assets/ipsumApi.js';
+import ipsum from './Ipsum.vue';
 export default {
     data() {
         return {
@@ -17,7 +19,8 @@ export default {
     },
     
     components: {
-        IpsumList
+        IpsumList,
+        ipsum
     }
 };
 </script>
