@@ -34,6 +34,7 @@
 <script>
 export default {
     data() {
+        //components use date picker -install npm i datepicker and change it to match in template above
         const update = this.ipsumToUpdate || {};
         return {
             ipsum: {
@@ -49,16 +50,6 @@ export default {
         ipsumToUpdate: Object
         // ipsumCategories: Array
     }
-    //computed: {
-        // date: {
-        //     get() {
-        //         return.this.ipsum.date.toISOstring().split('T')[0];
-        //     }
-            // set(value) {
-            //     this.ipsum.date = new Date(value);
-            // }
-        // }
-  //  }
 };
 </script>
 
