@@ -26,7 +26,7 @@
         </label>
         <label>
             <span></span>
-            <button type="submit">{{ ipsumUpdate ? 'Update' : 'Add' }}<button/>
+            <button type="submit">{{ AddIpsum ? 'Update' : 'Add' }}</button>
             <button type="button" @click="onCancel">Cancel</button>
         </label>
     </form>
@@ -37,9 +37,20 @@ export default {
   data() {
     const update = this.ipsumToUpdate || {};
     return {
-      ipsum: update.title || '',
-
+      ipsum: {
+        title: update.title || '',
+        category: update.catgory || '',
+        author: update.author || '',
+        website: update.authorUrl || '',
+        publicationDate: update.publishedOn || '',
+        body: update.body || ''
+      }
     };
+  },
+  props: {
+    onAdd: Function,
+    onCancel: Function,
+    ipsumToUpdate: Object
   }
 };
 </script>

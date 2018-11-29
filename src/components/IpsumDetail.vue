@@ -40,7 +40,7 @@ export default {
     }
   },
   watch: {
-    animal(old, updated) {
+    ipsum(old, updated) {
       if(old !== updated) {
         this.edit = false;
       }

@@ -1,7 +1,13 @@
 <template>
   <div id="app">
     <Header/>
-    <h2>Does This App.vue Render Its Template?</h2>
+    <AddIpsum
+      :onAdd="handleAdd"/>
+    <Ipsums
+      :ipsums="ipsums"/>
+    <IpsumDetail
+      :ipsum="selected"
+      :onEdit="handleEdit"/>
   </div>
 </template>
 
@@ -13,16 +19,31 @@ import IpsumDetail from './components/IpsumDetail.vue';
 import AddIpsum from './components/AddIpsum.vue';
 
 export default {
-  // data() {
-  //   return {
-  //     ipsums: ipsumApi.getIpsums(),
-  //     filter: {
-  //       weight: 0,
-
-  //     }
-  //   }
-
-  // }
+  data() {
+    return {
+      ipsums: ipsumApi.getIpsums(),
+    };
+  },
+  components: {
+    Header,
+    Ipsums,
+    IpsumDetail,
+    AddIpsum
+  },
+  methods: {
+    handleSelect(ipsum) {
+      this.selected = ipsum;
+    },
+    handleAdd(ipsum) {
+      this.ipsums.push(ipsum);
+      this.handleSelect(ipsum);
+    },
+    handleEdit(old, ipsum) {
+      const index = this.ipsums.indexOf(old);
+      this.ipsums.splice(index, 1, ipsum);
+      this.handleSelect(ipsum);
+    }
+  }
 };
 
 </script>

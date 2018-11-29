@@ -1,9 +1,9 @@
 <template>
     <ul>
-        Ipsum v-for="ipsum in ipsums"
-        @click.native="onSelect(animal)"
+        <Ipsum v-for="ipsum in ipsums"
+        @click.native="onSelect(ipsum)"
         :key="ipsum.name"
-        :ipsum="ipsum/>"
+        :ipsum="ipsum"/>
         <!-- why ipsim/>, why :ipsum= -->
     </ul>
 </template>
@@ -13,7 +13,7 @@ import Ipsum from './Ipsum.vue';
 export default {
   props: {
     ipsums: Array,
-    onSelecr: Function
+    onSelect: Function
   },
   components: {
     Ipsum
@@ -22,5 +22,4 @@ export default {
 </script>
 
 <style>
-
 </style>
