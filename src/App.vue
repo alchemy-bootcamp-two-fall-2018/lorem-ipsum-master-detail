@@ -1,13 +1,14 @@
 <template>
   <div id="app">
     <Header />
-    <IpsumList :ipsums="ipsums"/>
-    <Ipsum />
+    <IpsumList :ipsums="ipsums" 
+      :onSelect="handleSelect"/>
+    <Ipsum :ipsum="selected"/>
   </div>
 </template>
 
 <script>
-import data from '../data.js';
+import ipsumApi from '../ipsumApi.js';
 import Header from './components/Header.vue';
 import IpsumList from './components/IpsumList.vue';
 import Ipsum from './components/Ipsum';
@@ -17,7 +18,8 @@ export default {
 
   data() {
     return {
-      ipsums: data.getIpsums()
+      ipsums: ipsumApi.getIpsums(),
+      selected: null
     };
   },
 
@@ -25,6 +27,12 @@ export default {
     Header,
     IpsumList,
     Ipsum
+  },
+
+  methods: {
+    handleSelect(ipsum) {
+      this.selected = ipsum;
+    }
   }
 };
 </script>
