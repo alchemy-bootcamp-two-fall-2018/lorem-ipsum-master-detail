@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import Header from './Header.vue';
-import Ipsums from './Ipsums.vue';
+import Header from './components/Header.vue';
+import Ipsums from './components/Ipsums.vue';
 
 export default {
     components: {
