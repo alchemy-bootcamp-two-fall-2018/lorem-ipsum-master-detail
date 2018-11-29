@@ -1,7 +1,8 @@
 <template>
-    
+   
     <ul>
         <IpsumItem v-for="ipsum in ipsums"
+        @click.native="onSelect(ipsum)"
         v-bind:key="ipsum.title"
         v-bind:ipsum="ipsum"/>  
     </ul>
@@ -25,6 +26,7 @@ export default {
     //parent, what's coming in to be used 
     props: {
         ipsums: Array,
+        onSelect: Function,
 
 
     }
