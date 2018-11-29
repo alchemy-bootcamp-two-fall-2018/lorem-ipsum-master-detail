@@ -26,6 +26,11 @@
         <span>Body Copy:</span>
         <input>
       </label>
+      <label>
+        <span>
+          <button type="button">Add</button>
+        </span>
+      </label>
     </form>
   </div>
 </template>

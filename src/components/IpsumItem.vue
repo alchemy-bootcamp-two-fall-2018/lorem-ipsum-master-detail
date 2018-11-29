@@ -22,5 +22,6 @@ export default {
         background: lightgoldenrodyellow;
         box-shadow: 5px 10px 10px grey;
         height: 50px;
+        cursor: pointer;
     }
 </style>

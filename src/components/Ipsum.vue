@@ -31,5 +31,7 @@ export default {
 </script>
 
 <style>
-
+    button {
+        margin: 25px;
+    } 
 </style>
