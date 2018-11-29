@@ -1,31 +1,27 @@
 <template>
-  <ul>
-        <h3>{{ipsum.title}}</h3>
-
-        <IpsumDetail
-          v-bind:ipsum="ipsum"
-        />
-
-        <IpsumForm
-
-        /> -->
-
-  </ul>
+  <section>
+     <IpsumDetail v-bind:ipsum="ipsum"/>
+  </section>
 </template>
 
 <script>
 import IpsumDetail from './IpsumDetail.vue'
-import IpsumForm from './IpsumForm.vue'
+
 
 export default {
+  data() {
+    return {
+      show: false
+    };
+  },
   props: {
-    ipsum: Object
+    ipsum: Object,
+    onAdd: Function
   },
   components: {
-    IpsumDetail,
-    IpsumForm
+    IpsumDetail, 
   }
-}
+};
 </script>
 
 <style>
