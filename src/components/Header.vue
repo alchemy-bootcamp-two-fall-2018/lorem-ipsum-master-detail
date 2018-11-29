@@ -1,61 +1,39 @@
 <template>
-  <header>
-    <label>
-      Weight:
-      <input type="number" 
-        v-model.number="filter.weight" 
-        step="100"
-      >
-    </label>
-
-    <label>
-      Type:
-      <select v-model="filter.type">
-        <option value="">All</option>
-        <option 
-          v-for="type in types" 
-          v-bind:key="type"
-          v-bind:value="type">
-          {{type}}
-        </option>
-      </select>
-    </label>
-
-    <label>
-      Sort By:
-      <select v-model="sort.field">
-        <option value="name">Name</option>
-        <option value="type">Type</option>
-
-      </select>
-      <select v-model="sort.direction">
-        <option value="1">Asc</option>
-        <option value="-1">Desc</option>
-      </select>
-    </label>
-  </header>
+    <header>
+      <h1> Lorem Ipsum List</h1>
+      <img src="../../public/lorem-logo.png">
+    </header>
 </template>
 
 <script>
 import ipsumsApi from '../ipsumsApi';
 export default {
-  data() {
-    return {
-      types: animalsApi.getTypes()
-    };
-  },
-  props: {
-    filter: Object,
-    types: Array,
-    sort: Object
-  }
+//   data() {
+//     return {
+//       types: animalsApi.getTypes()
+//     };
+//   },
+//   props: {
+    
+//   }
 };
 </script>
 
 <style scoped>
 header {
-  background: steelblue;
-  color: white;
-  padding: 10px;
+    background: rgb(14, 213, 240);
+    color: rgba(179, 154, 44, 0.514);
+    padding: 10px;
+    text-align: center;
+    border: 20px solid black
+}
+img {
+    width: 100%;
+    padding: 10px;
+    border: 10px rgba(179, 154, 44, 0.514);
+}
+h1 {
+    padding: 10px;
+    font-size: 3em;
 }
 </style>
