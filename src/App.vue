@@ -1,19 +1,32 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <img alt="logo" src="https://thumbs.dreamstime.com/z/li-logo-design-template-illustration-concept-82257118.jpg" width="150px">
+    <!-- <Header /> -->
+    <Ipsums  
+    v-bind:ipsums="ipsums"
+    />
+     {{ipsums}}
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ipsumApi from './services/ipsumApi';
+import Ipsums from './components/Ipsum';
+// import Header from './components/Header';
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
-  }
-}
+    // Header,
+    Ipsums
+    
+  },
+  data() {
+    return {
+      ipsums: ipsumApi.getData(),
+    };
+  },
+};
 </script>
 
 <style>
@@ -25,4 +38,5 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
 </style>
