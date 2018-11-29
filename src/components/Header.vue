@@ -20,5 +20,9 @@ export default {
     h1, h2 {
         display: inline;
         margin: 2%;
+        color: white;
+    }
+    header {
+        background-color: rgb(110, 7, 88);
     }
 </style>

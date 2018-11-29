@@ -7,6 +7,9 @@
 
 <script>
 
+// better css
+// special css for selected item
+
 import Header from './components/Header.vue';
 import Ipsums from './components/Ipsums.vue';
 

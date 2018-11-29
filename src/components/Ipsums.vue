@@ -31,9 +31,9 @@ export default {
     methods: {
         handleSelect(ipsum) {
             this.ipsum = ipsum;
+            this.edit = false;
         },
         handleAdd(newIpsum) {
-            console.log(newIpsum);
             this.ipsums.push(newIpsum);
             this.ipsum = newIpsum;
         }

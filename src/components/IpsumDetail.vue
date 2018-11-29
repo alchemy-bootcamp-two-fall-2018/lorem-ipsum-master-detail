@@ -5,13 +5,15 @@
         <p>Published On: {{ipsum.publishedOn}}</p>
         <p>Author URL: <a v-bind:href="ipsum.authorUrl">{{ipsum.authorUrl}}</a></p>
         <div v-html="ipsum.body"></div>
+        <button @click="onEdit">Edit</button>
     </div>
 </template>
 
 <script>
 export default {
     props: {
-        ipsum: Object
+        ipsum: Object,
+        onEdit: Function
     }
 };
 </script>

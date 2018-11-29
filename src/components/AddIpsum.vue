@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section id="addForm">
         <h3>Add an Author</h3>
         <!-- <form @submit.prevent="onAdd(newIpsum)"> -->
             <label>
@@ -39,11 +39,13 @@ export default {
         };
     },
     props: {
-        onAdd: Function,
+        onAdd: Function
     }
 };
 </script>
 
 <style>
-
+#addForm {
+    background-color: aqua;
+}
 </style>
