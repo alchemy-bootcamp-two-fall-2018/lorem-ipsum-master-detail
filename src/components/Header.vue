@@ -1,8 +1,8 @@
 <template>
     <header>
-        <h1>{{pageTitle}}</h1>
+        <h1>{{ pageTitle }}</h1>
         <h2> Lorem Ipsum List</h2>
-        <!-- <img src="../public/lorem-logo.png"> -->
+        <img src="./bob-ross.jpg" alt="photo-of-bob-ross" class="pic"/>
     </header>
 </template>
 
@@ -20,15 +20,16 @@ export default {
 <style scoped>
 header {
     background: rgb(14, 213, 240);
-    color: rgba(179, 154, 44, 0.514);
+    color: rgb(167, 182, 31);
     padding: 10px;
     text-align: center;
     border: 20px solid black
 }
 img {
-    width: 100%;
+    width: 80%;
     padding: 10px;
-    border: 10px rgba(179, 154, 44, 0.514);
+    border: 20px rgba(185, 231, 17, 0.719);
+    border-color: rgb(159, 240, 28);
 }
 h1, h2 {
     padding: 10px;

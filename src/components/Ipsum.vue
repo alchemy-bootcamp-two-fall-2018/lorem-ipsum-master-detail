@@ -6,7 +6,6 @@
     <div v-else>
       <h2>Add a new Ipsum</h2>
       <IpsumForm v-show="true" v-bind:ipsum="ipsum"/>
-    <p>What the Ipsum!?...</p>
     </div>
     <IpsumForm/>
     <IpsumDetail/>
