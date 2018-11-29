@@ -1,9 +1,9 @@
 <template>
-    <div>
+    <li>
         {{ipsum.title}}
         {{ipsum.category}}
         {{ipsum.body}}
-    </div>
+    </li>
 </template>
 
 <script>

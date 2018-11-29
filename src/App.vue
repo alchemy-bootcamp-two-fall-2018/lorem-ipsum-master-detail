@@ -1,27 +1,27 @@
 <template>
   <div id="app">
     <Header/>
-    <Ipsums :ipsums="ipsums"/>
-    <AddIpsum/>
+    <Ipsums :ipsums="ipsums"
+    :onSelect="handleSelect"/> 
   </div>
 </template>
 
 <script>
-import ipsumsApi from '../data.js';
-import Ipsums from './components/Ipsums.vue';
 import Header from './components/Header.vue';
+import Ipsums  from './components/Ipsums.vue';
 
 export default {
-  data() {
-    return {
-      ipsums: ipsumsApi.getIpsums()
-    };
-  },
   components: {
     Ipsums,
     Header
+  },
+  methods: {
+    handleSelect(ipsum) {
+      this.selected = ipsum;
+    }
   }
-}
+};
+
 </script>
 
 <style>
