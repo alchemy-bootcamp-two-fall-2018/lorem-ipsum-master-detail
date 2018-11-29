@@ -49,5 +49,31 @@ export default {
 </script>
 
 <style>
-
+  form {
+    text-align: center;
+    margin-left: 10%;
+  }
+  button {
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 0.75em;
+    padding: 6px;
+  }
+  span {
+    width: 190px;
+    display: inline-block;
+  }
+  input, textarea {
+    width: 450px;
+  }
+  label {
+    display: flex;
+    padding: 5px;
+    font-size: 1.1em;
+    font-weight: 500;
+  }
+  textarea {
+    height: 50px;
+  }
 </style>
