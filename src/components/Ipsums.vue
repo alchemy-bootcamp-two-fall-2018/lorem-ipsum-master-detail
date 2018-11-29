@@ -34,6 +34,8 @@ export default {
         },
         handleAdd(newIpsum) {
             console.log(newIpsum);
+            this.ipsums.push(newIpsum);
+            this.ipsum = newIpsum;
         }
     }
 };

@@ -1,7 +1,7 @@
 <template>
     <section>
         <h3>Add an Author</h3>
-        <!-- <form> -->
+        <!-- <form @submit.prevent="onAdd(newIpsum)"> -->
             <label>
                 <span>Title:</span>
                 <input v-model="newIpsum.title" required>
