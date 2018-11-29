@@ -1,7 +1,6 @@
 <template>
     <header>
         Logo and Title
-
     </header>
 </template>
 

@@ -29,7 +29,6 @@ export default {
   methods: {
     handleSelect(ipsum) {
       this.selected = ipsum;
-      console.log(ipsum);
     }
   }      
 };
