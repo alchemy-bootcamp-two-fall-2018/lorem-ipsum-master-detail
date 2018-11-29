@@ -5,7 +5,7 @@
             <input v-model="ipsum.title" required>
         </label>
         <label>
-            <span>Category:</span>
+            <!-- <span>Category:</span>
             <select v-model="ipsum.category" required>
                 <option value="" disabled>Select a Category</option>
                 <option 
@@ -14,7 +14,7 @@
                 v-bind:value="category">
                 {{category}}
                 </option>
-            </select>
+            </select> -->
         </label>
         <label>
             <span>Published Date:</span>
@@ -38,16 +38,27 @@ export default {
         return {
             ipsum: {
                 title: update.title || '',
-                category: update.category || '',
+                // category: update.category || '',
                 publishedOn: update.publishedOn || ''
+                //publishedOn: update.publishedOn || null
             }
         };
     },
     props: {
         onAdd: Function,
-        ipsumToUpdate: Object,
-        ipsumCategories: Array
+        ipsumToUpdate: Object
+        // ipsumCategories: Array
     }
+    //computed: {
+        // date: {
+        //     get() {
+        //         return.this.ipsum.date.toISOstring().split('T')[0];
+        //     }
+            // set(value) {
+            //     this.ipsum.date = new Date(value);
+            // }
+        // }
+  //  }
 };
 </script>
 

@@ -8,9 +8,9 @@
         :onSelect="handleSelect"/>
 
         <AddIpsum
-        :onAdd="handleAdd"
-        :ipsumCategories="ipsumCategories"/>
+        :onAdd="handleAdd"/>
 
+        <!-- :ipsumCategories="ipsumCategories"/> -->
     </div>
 </template>
 
@@ -38,6 +38,7 @@ export default {
     },
     handleAdd(ipsum) {
         this.ipsums.push(ipsum);
+        this.handleSelect(ipsum);
     }
   }
 };

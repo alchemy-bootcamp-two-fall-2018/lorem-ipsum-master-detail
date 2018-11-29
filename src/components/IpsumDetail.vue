@@ -3,6 +3,7 @@
         <p>Title:{{ipsum.title}}</p>
         <p>Category:{{ipsum.category}}</p>
         <p>Author:{{ipsum.author}}</p>
+        //a: href uthor link
         <p>Published Date:{{ipsum.publishedOn}}</p>
         <p v-html="ipsum.body"></p>
     </li>
