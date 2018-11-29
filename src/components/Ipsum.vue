@@ -11,7 +11,7 @@
         </div>
         <div v-else>
             <h3>Add your own Ipsum!</h3>
-            <IpsumForm />
+            <IpsumForm :onCancel = "() => show = false" />
         </div>
     </section>
 </template>

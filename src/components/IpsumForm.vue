@@ -26,12 +26,16 @@
             <textarea></textarea>
         </label>
         <button>Add an ipsum!</button>
+        <button @click.prevent = "onCancel">Cancel</button>
     </form>
     </div>
 </template>
 
 <script>
 export default {
+  props: {
+    onCancel: Function
+  }
 
 };
 </script>
