@@ -1,7 +1,7 @@
 <template>
     <li>
         <div class="info">
-            <h3> {{ ipsums.title }} </h3>
+            <h3>{{ ipsum.title }}</h3>
         </div>
     </li>
 </template>
@@ -13,3 +13,7 @@ export default {
     }
 };
 </script>
+
+<style>
+
+</style>
