@@ -1,5 +1,7 @@
 <template>
-    <section v-if="ipsum">
+    <section 
+        <div v-if="ipsum">
+            <h3> Ipsum {{ispum.name}}</h2>
             <p>Author: {{ipsum.author}}</p>
             <p>Category: {{ipsum.category}}</p>
             <p>body:</p>
