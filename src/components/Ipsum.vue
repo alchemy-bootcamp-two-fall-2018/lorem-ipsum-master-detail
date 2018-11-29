@@ -17,7 +17,7 @@ export default {
     components: {
         IpsumDetail
     },
-}
+};
 </script>
 
 <style>

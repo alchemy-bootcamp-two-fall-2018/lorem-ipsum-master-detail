@@ -40,8 +40,13 @@ export default {
             this.selected = ipsum;
             console.log('you have selected', ipsum);
 
+        },
+        handleAdd(ipsumData) {
+            this.Ipsum.push(ipsumData);
+            this.handleSelect(ipsumData);
+            console.log('you have added', ipsumData);
         }
-    }
+    },
 
 };
 
