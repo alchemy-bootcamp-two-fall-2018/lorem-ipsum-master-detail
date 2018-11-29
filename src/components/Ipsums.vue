@@ -12,13 +12,22 @@
 <script>
 import IpsumList from './IpsumList.vue';
 import Ipsum from './Ipsum.vue';
+import ipsumApi from '../../ipsumApi.js';
 export default {
+    data() {
+        return {
+            ipsums: ipsumApi.getAll(),
+        }
+    },
     components: {
         IpsumList,
         Ipsum
     },
-    props: {
-        ipsums: Array,
+    methods: {
+        handleSelect(ipsum) {
+            this.selected = ipsum;
+            console.log(ipsum, 'you selected that');
+        }
     }
 }
 </script>

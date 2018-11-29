@@ -14,5 +14,15 @@ export default {
 </script>
 
 <style>
-
+    li {
+        display: flex;
+        flex-direction: column;
+        padding: 9px;
+        text-align: center;
+        background: steelblue;
+        color: white;
+        margin: 4px;
+        border-radius: 4px;
+        border: 2px navy solid;
+    }
 </style>
