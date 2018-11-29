@@ -2,7 +2,9 @@
     <div>
         <IpsumDetail :ipsum="ipsum" 
                     :onEdit="handleEdit"/>
-        <IpsumForm v-if="edit"/>
+        <IpsumForm v-if="edit"
+                    :onUpdate="onUpdate"
+                    :onCancel="onCancel"/>
     </div>
 </template>
 
@@ -19,7 +21,9 @@ export default {
     },
     props: {
         ipsum: Object,
-        onEdit: Function
+        onEdit: Function,
+        onUpdate: Function,
+        onCancel: Function
     },
     components: {
         IpsumDetail,

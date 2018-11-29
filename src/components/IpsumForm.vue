@@ -26,7 +26,7 @@
                 <input type="textarea" v-model="updateIpsum.body" required>
             </label>
             <button @click="onUpdate(updateIpsum)">Update</button>
-            <!-- <button @click="onCancel">Cancel</button> -->
+            <button @click="onCancel()">Cancel</button>
     </section>
 </template>
 
