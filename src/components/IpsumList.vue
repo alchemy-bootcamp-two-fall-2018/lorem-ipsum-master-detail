@@ -1,7 +1,8 @@
 <template>
     <li>
-      <div>
-        <h3>{{ipsum.title}}</h3>
+      <div class="list">
+        <h3>{{ipsum.author}}</h3>
+        <p>{{ipsum.category}}</p>
       </div>
     </li>
 </template>
@@ -16,5 +17,7 @@ export default {
 </script>
 
 <style>
-
+.list {
+  border: 1px solid black;
+}
 </style>
