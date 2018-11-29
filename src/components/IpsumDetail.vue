@@ -15,14 +15,13 @@
 export default {
     props: {
         ipsum: Object,
-       
     }
 };
 </script>
 
 <style scoped>
 div {
-    border: 1px solid red;
+    border: 1px solid gray;
    
     align-content: center;
     

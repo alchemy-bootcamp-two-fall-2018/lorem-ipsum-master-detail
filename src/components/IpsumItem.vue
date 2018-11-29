@@ -22,7 +22,7 @@ export default {
 
 <style scoped>
 li {
-    border: 2px solid blue;
+    border: 2px solid teal;
     margin: 5px;
 }
 img {

@@ -1,8 +1,8 @@
 <template>
         <form>
              <label>
-                 <span>Title:</span>
-                 <input v-model="ipsum.title">
+                Title:
+                <input v-model="ipsum.title">
             </label>
         </form>
 </template>
@@ -17,5 +17,8 @@ export default {
 </script>
 
 <style>
+form {
+    border: 2px solid navy;
+}
 
 </style>
