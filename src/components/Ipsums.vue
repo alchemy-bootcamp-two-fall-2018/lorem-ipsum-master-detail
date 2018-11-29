@@ -1,19 +1,21 @@
 <template>
-    <ul>
-       <Ipsum v-for="ipsum in ipsums"
-            :key="ipsum.title"
-            :ipsum="ipsum"/> 
-    </ul>
+    <div>
+      <IpsumList/>  
+    </div>
 </template>
 
 <script>
-import ipsumsApi from './services/ipsumsApi';
+import ipsumsApi from '../services/ipsumsApi';
+import IpsumList from './IpsumList.vue';
 
 export default {
   data() {
     return {
       ipsums: ipsumsApi.getIpsums(),
     };
+  },
+  components: {
+    IpsumList
   }
 };
 </script>
