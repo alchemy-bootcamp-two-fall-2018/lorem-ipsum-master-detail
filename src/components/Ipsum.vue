@@ -1,8 +1,12 @@
 <template>
-    <div>
-        <p> this is the container for the detail component</p>
-        <IpsumDetail :ipsum="ipsum"/>
-    </div>
+    <section>
+        <div v-if="!ipsum">
+            <p>Scroll and click on an ipsum to learn more!</p>
+        </div>
+        <div v-if="ipsum">
+            <IpsumDetail :ipsum="ipsum"/>
+        </div>
+    </section>
 </template>
 
 <script>
