@@ -5,7 +5,7 @@
 
 <script>
 import IpsumList from './IpsumList.vue';
-import ipsumApi from './services/ipsumApi.js';
+import ipsumApi from '../services/ipsumApi.js';
 
 export default {
   data() {

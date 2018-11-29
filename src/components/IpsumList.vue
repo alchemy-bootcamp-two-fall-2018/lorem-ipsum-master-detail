@@ -3,7 +3,7 @@
     <IpsumItem v-for="ipsum in data"
       @click.native="onSelect(ipsum)"
       :key="ipsum.title"
-      :animal="ipsum" />
+      :ipsum="ipsum" />
   </ul>
 </template>
 
@@ -12,7 +12,8 @@ import IpsumItem from './IpsumItem.vue';
 
 export default {
   props: {
-    data: Array
+    data: Array,
+    onSelect: Function,
   },
   components: {
     IpsumItem
