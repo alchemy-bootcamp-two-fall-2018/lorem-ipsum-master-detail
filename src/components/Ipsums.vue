@@ -1,6 +1,8 @@
 <template>
     <!-- <h1>Pick your Ipsum!</h1> -->
-    <IpsumList/>
+    <IpsumList
+        :ipsums="ipsums"
+    />
        
    
 </template>

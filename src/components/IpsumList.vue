@@ -2,7 +2,7 @@
     <ul>
         <IpsumItem  v-for="ipsum in ipsums"
             :key="ipsum.title"
-            :ipsum="ipsum">
+            :ipsum="ipsum"/>
     </ul>
 </template>
 
