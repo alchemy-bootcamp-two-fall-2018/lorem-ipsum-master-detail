@@ -1,10 +1,10 @@
 <template>
     <div>
-        <!-- Title: {{ipsum.title}}
+        Title: {{ipsum.title}}
         Category: {{ipsum.art}}
         Author: {{ipsum.author}}
         Published: {{ipsum.publishedOn}}
-        <a v-bind:href="ipsum.authorUrl">Learn more about the author.</a> -->
+        <a v-bind:href="ipsum.authorUrl">Learn more about the author.</a>
         
     </div>
 </template>
