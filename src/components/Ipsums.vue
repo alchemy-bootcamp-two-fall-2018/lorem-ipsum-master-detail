@@ -1,6 +1,7 @@
 <template>
     <ul>
         <Ipsum v-for="ipsum in ipsums"
+            @click.native="onSelect(ipsum)"
             :key="ipsum.title"
             :ipsum="ipsum"
         />
@@ -28,6 +29,6 @@ export default {
 ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    
+
 }
 </style>

@@ -10,7 +10,8 @@
 <script>
 export default {
     props: {
-        ipsum: Object
+        ipsum: Object,
+        onSelect: Function
     }
 };
 </script>

@@ -14,6 +14,11 @@ export default {
     components: {
         Header,
         Ipsums
+    },
+    methods: {
+        handleSelect(ipsum) {
+            this.selected = ipsum;
+        }
     }
 };
 </script>
