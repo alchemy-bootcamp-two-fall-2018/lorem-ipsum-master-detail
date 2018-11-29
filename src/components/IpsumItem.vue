@@ -1,7 +1,6 @@
 <template>
     <li>
         {{ipsum.title}}
-        {{ipsum.category}}
     </li>
 </template>
 
@@ -15,10 +14,13 @@ export default {
 
 <style>
 li {
-    border: 1px solid;
+    font-family: 'Old Standard TT', serif;
+    margin:5px 15px;
+    background-color:ghostwhite;
     display: grid;
     list-style-type: none;
-    grid-template-columns: repeat (auto-fit, minmax,(150px, 1fr));
+    padding: 10px 15px 10px 20px;
+    grid-template-columns: repeat (auto-fit, minmax,(200px, 2fr));
 }
 
 </style>

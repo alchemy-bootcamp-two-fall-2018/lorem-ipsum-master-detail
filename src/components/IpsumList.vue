@@ -1,6 +1,6 @@
 <template>
     <ul>
-        <Ipsum v-for="ipsum in ipsums"
+        <IpsumItem v-for="ipsum in ipsums"
         @click.native="onSelect(ipsum)"
         :key="ipsum.title"
         :ipsum="ipsum"/>
@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import Ipsum from './Ipsum.vue';
+import IpsumItem from './IpsumItem.vue';
 
 export default {
     props: {
@@ -16,7 +16,7 @@ export default {
         onSelect: Function
     },
     components: {
-        Ipsum
+        IpsumItem
     }
 };
 
@@ -28,5 +28,7 @@ ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     list-style-type: none;
+    padding: 10px;
+    margin: 10px;
 }
 </style>

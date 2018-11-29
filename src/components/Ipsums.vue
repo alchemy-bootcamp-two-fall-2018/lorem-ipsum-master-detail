@@ -1,19 +1,24 @@
 <template>
     <div>
-        <Ipsum v-if="selected"
+        <IpsumItem v-if="selected"
         :ipsum="selected"/>
 
         <IpsumList
         :ipsums="ipsums"
         :onSelect="handleSelect"/>
 
+        <AddIpsum
+        :onAdd="handleAdd"
+        :ipsumTypes="ipsumTypes"/>
+
     </div>
 </template>
 
 <script>
 import ipsumsApi from '../../data.js';
-import Ipsum from './Ipsum.vue';
+import IpsumItem from './IpsumItem.vue';
 import IpsumList from './IpsumList.vue';
+import AddIpsum from './AddIpsum.vue';
 
 export default {
     data() {
@@ -23,12 +28,16 @@ export default {
     };
   },
     components: {
-    Ipsum,
-    IpsumList
+    IpsumItem,
+    IpsumList,
+    AddIpsum
   },
   methods: {
     handleSelect(ipsum) {
       this.selected = ipsum;
+    },
+    handleAdd(ipsum) {
+        this.ipsums.push(ipsum);
     }
   }
 };
