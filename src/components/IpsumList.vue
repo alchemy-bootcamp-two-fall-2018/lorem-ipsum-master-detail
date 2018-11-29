@@ -12,7 +12,7 @@
 import IpsumItem from './IpsumItem.vue';
 
 export default {
-    props: {
+props: {
         ipsums: Array,
         onSelect: Function
     },
