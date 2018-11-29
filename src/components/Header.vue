@@ -1,5 +1,6 @@
 <template>
     <div id="header">
+        <img src="../assets/logo.png" />
         <h1>Ipsum Flipsum</h1>
         <p>Everybody wants their own ipsum...</p>
     </div>
@@ -19,6 +20,11 @@ export default {
 }
 h1 {
     text-transform: uppercase;
+}
+img {
+    float: left;
+    width: 13vw;
+    margin: 5px;
 }
 p {
     font-size: 1.15em;
