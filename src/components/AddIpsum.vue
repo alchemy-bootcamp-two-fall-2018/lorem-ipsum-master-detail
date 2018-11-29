@@ -1,12 +1,11 @@
 <template>
   <section>
     <div v-if="!show">
-      <button @click="show = true">Add an Animal</button>
+      <button @click="show = true">Add an Ipsum</button>
     </div>
     <div v-else>
-      <h2>Add a new Animal</h2>
-      <AnimalForm
-        :animalTypes="animalTypes"
+      <h2>Add a new Ipsum</h2>
+      <IpsumForm
         :onAdd="handleAdd"
         :onCancel="() => show = false"/>
     </div>
@@ -14,7 +13,7 @@
 </template>
 
 <script>
-import AnimalForm from './AnimalForm';
+import IpsumForm from './IpsumForm';
 export default {
   data() {
     return {
@@ -22,16 +21,15 @@ export default {
     };
   },
   components: {
-    AnimalForm
+    IpsumForm
   },
   props: {
-    animalTypes: Array,
     onAdd: Function
   },
   methods: {
-    handleAdd(animal) {
+    handleAdd(ipsum) {
       this.show = false;
-      this.onAdd(animal);
+      this.onAdd(ipsum);
     }
   }
 };

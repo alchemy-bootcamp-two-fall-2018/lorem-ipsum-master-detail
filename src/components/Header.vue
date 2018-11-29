@@ -1,21 +1,19 @@
 <template>
     <header>
-      <h1> Lorem Ipsum List</h1>
-      <img src="../../public/lorem-logo.png">
+        <h1>{{pageTitle}}</h1>
+        <h2> Lorem Ipsum List</h2>
+        <!-- <img src="../public/lorem-logo.png"> -->
     </header>
 </template>
 
 <script>
-import ipsumsApi from '../ipsumsApi';
+// import ipsumsApi from '../ipsumsApi';
 export default {
-//   data() {
-//     return {
-//       types: animalsApi.getTypes()
-//     };
-//   },
-//   props: {
-    
-//   }
+  data() {
+    return {
+        pageTitle: 'Ipsum',
+    };
+  }
 };
 </script>
 
@@ -32,7 +30,7 @@ img {
     padding: 10px;
     border: 10px rgba(179, 154, 44, 0.514);
 }
-h1 {
+h1, h2 {
     padding: 10px;
     font-size: 3em;
 }
