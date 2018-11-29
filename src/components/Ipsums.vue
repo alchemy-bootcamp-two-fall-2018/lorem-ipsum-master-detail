@@ -8,7 +8,7 @@
         :onSelect="handleSelect"/> 
 
 
-        <IpsumDetail
+        <Ipsum
         :selected="selected"
         />
 
@@ -20,7 +20,7 @@
 
 import IpsumsList from './IpsumsList.vue';
 import dataApi from '../../dataApi.js';
-import IpsumDetail from './IpsumsDetail.vue';
+import Ipsum from './Ipsum.vue';
 
 export default {
     data() {
@@ -32,7 +32,7 @@ export default {
    
     components: {
         IpsumsList,
-        IpsumDetail
+        Ipsum
     },
 
     methods: {
