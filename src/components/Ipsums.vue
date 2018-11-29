@@ -4,16 +4,12 @@
         v-bind:key="ipsum.title"
         v-bind:ipsum="ipsum" />
     </ul>
-   
-  
-</template>
+   </template>
 
 <script>
 import Ipsum from './Ipsum';
 
 export default {
-  
-
   props: {
     ipsums: Array
   },
