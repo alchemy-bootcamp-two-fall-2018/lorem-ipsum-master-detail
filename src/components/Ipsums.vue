@@ -4,7 +4,8 @@
         :ipsumdata="ipsumdata"
         :onSelect="handleSelect"
         />
-        <Ipsum/>
+        <Ipsum
+        :ipsum="selected"/>
     </div>
 </template>
 
@@ -29,6 +30,7 @@ export default {
   methods: {
     handleSelect(ipsum) {
       this.selected = ipsum;
+      console.log(ipsum);
     }
   }      
 };

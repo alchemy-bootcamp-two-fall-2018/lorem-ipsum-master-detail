@@ -1,7 +1,7 @@
 <template>
     <div>
-        I'm an Ipsum - I control whether you show details or form
-        <IpsumDetail/>
+        <IpsumDetail
+        :ipsum="ipsum"/>
     </div>
 </template>
 
@@ -11,6 +11,9 @@ import IpsumDetail from './IpsumDetail.vue';
 export default {
   components: {
     IpsumDetail
+  },
+  props: {
+    ipsum: Object
   }
 };
 </script>

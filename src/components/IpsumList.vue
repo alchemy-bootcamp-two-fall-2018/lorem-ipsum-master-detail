@@ -15,7 +15,6 @@ export default {
   },
   props: {
     ipsumdata: Array,
-    selected: Object,
     onSelect: Function
   }    
 };
