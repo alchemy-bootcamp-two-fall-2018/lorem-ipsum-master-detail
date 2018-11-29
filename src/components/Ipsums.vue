@@ -1,12 +1,12 @@
 <template>
     <div id="ipsums-container">
         <h2>Ipsums</h2>
-        <Ipsum
-        :ipsum="selected"
-        />
         <IpsumList
         :ipsums="ipsums"
         :onSelect="handleSelect"
+        />
+        <Ipsum
+        :ipsum="selected"
         />
     </div>
 </template>
