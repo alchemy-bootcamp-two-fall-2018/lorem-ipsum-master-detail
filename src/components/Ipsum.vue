@@ -2,8 +2,8 @@
   <ul>
         <h3>{{ipsum.title}}</h3>
 
-        <!-- <IpsumDetail
-          
+        <IpsumDetail
+          v-bind:ipsum="ipsum"
         />
 
         <IpsumForm

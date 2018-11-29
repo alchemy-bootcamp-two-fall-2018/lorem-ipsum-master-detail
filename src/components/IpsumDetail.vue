@@ -1,12 +1,19 @@
 <template>
-  <ul>
-        <h3>This is the ipsum detail component</h3>
-  </ul>
+  <div>
+     {{ipsum.name}}
+     {{ipsum.author}}
+        
+  </div>
 </template>
 
 <script>
+
 export default {
 
+  props: {
+    ipsum: Object
+  },
+  
 }
 </script>
 

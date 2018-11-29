@@ -1,11 +1,14 @@
 <template>
-  <ul>
+  <li>
         <h3>This is the Ipsum Item component</h3>
-  </ul>
+  </li>
 </template>
 
 <script>
 export default {
+  props: {
+    ipsum: Object
+  }
 
 }
 </script>
