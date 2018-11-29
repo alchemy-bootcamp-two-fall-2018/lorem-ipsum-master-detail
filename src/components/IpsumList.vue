@@ -3,7 +3,10 @@
     <IpsumItem v-for="ipsum in ipsums"
       @click.native="onSelect(ipsum)"
       :key="ipsum.title"
-      :ipsum="ipsum"/>
+      :ipsum="ipsum"
+
+
+    />
   </ul>    
 </template>
 
@@ -22,6 +25,14 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+ul {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 4px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
 </style>

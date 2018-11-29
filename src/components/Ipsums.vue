@@ -5,7 +5,7 @@
   :ipsums="data"
   :onSelect="handleSelect"
   />
-  <Ipsum />
+  <Ipsum :ipsum="selected" />
   </div>
 </template>
 
@@ -18,7 +18,8 @@ import Ipsum from './Ipsum.vue';
 export default {
     data() {
         return {
-            data: dataApi.getIpsums()
+            data: dataApi.getIpsums(),
+            selected: null
         }; 
     },
 
@@ -28,9 +29,8 @@ export default {
     },
     methods: {
         handleSelect(ipsum) {
-            console.log('ipsum', ipsum);
-            console.log('handled', this.selected);
             this.selected = ipsum;
+            console.log('handled', this.selected);
         } 
     
     }

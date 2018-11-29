@@ -1,10 +1,21 @@
 <template>
-  <h2>This is Ipsum </h2>
+  <div>
+ 
+  <IpsumDetail 
+    :ipsum="ipsum"
+  />
+  </div>
 </template>
 
 <script>
+import IpsumDetail from './IpsumDetail.vue';
 export default {
-
+    props: {
+        ipsum: Object
+    },
+    components: {
+        IpsumDetail
+    }
 };
 </script>
 
