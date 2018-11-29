@@ -4,7 +4,10 @@
             <label> Title:
                 <input v-model="ipsum.title">
             </label>
-        <button type="submit">{{ IpsumToUpdate ? 'Update' : 'Add'}}</button>
+            <label> Author:
+                <input v-model="ipsum.author">
+            </label>
+        <button type="button" @click.prevent="onAdd"> Add </button>
         <button type="button" @click="onCancel">Cancel</button>
 
         </form>
@@ -19,6 +22,8 @@ export default {
         return {
             ipsum: {
                 title: update.title || '',
+                author: update.author || '',
+
             }
         };
     },

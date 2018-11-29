@@ -11,6 +11,10 @@
         <Ipsum
         :selected="selected"
         />
+        
+        <AddForm :onAdd="handleAdd"/>
+        
+
 
     </div>
 
@@ -21,6 +25,7 @@
 import IpsumsList from './IpsumsList.vue';
 import dataApi from '../../dataApi.js';
 import Ipsum from './Ipsum.vue';
+import AddForm from './AddForm.vue';
 
 export default {
     data() {
@@ -32,17 +37,19 @@ export default {
    
     components: {
         IpsumsList,
-        Ipsum
+        Ipsum,
+        AddForm
+    
     },
 
     methods: {
         handleSelect(ipsum) {
-            this.selected = ipsum;
+            this.selected = ipsum === this.selected ? null : ipsum;
             console.log('you have selected', ipsum);
 
         },
         handleAdd(ipsumData) {
-            this.Ipsum.push(ipsumData);
+            this.data.push(ipsumData);
             this.handleSelect(ipsumData);
             console.log('you have added', ipsumData);
         }
