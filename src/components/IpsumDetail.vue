@@ -1,18 +1,20 @@
 <template>
-    <section>
-        <div v-if="edit">
-            <IpsumForm
-                :ipsumToUpdate="ipsum"
+    <section v-if="ipsum">
+            <p>Author: {{ipsum.author}}</p>
+            <p>Category: {{ipsum.category}}</p>
+            <p>body:</p>
+    </div v-html="ipsum.body"></div>
+    </section>
+</template>
 
+<script>
+export default {
+    props: {
+        ipsum: Object
+    }
+};
+</script>
 
-                
-                <script>
-                export default {
-                
-                }
-                </script>
-                
-                <style>
-                
-                </style>
-                
+<style>
+
+</style>
