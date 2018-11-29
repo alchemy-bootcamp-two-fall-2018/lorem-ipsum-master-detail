@@ -3,13 +3,12 @@
     <Header 
     />
     <Ipsums  
-    v-bind:ipsums="ipsums"
+    
     />
   </div>
 </template>
 
 <script>
-import ipsumApi from './services/ipsumApi';
 import Ipsums from './components/Ipsums';
 import Header from './components/Header';
 
@@ -19,12 +18,8 @@ export default {
     Header,
     Ipsums
     
-  },
-  data() {
-    return {
-      ipsums: ipsumApi.getData(),
-    };
-  },
+  }
+  
 };
 </script>
 

@@ -1,32 +1,34 @@
 <template>
-    <ul>
-        <Ipsum v-for="ipsum in ipsums"
-        v-bind:key="ipsum.title"
-        v-bind:ipsum="ipsum" />
-    </ul>
+   <IpsumList 
+   :ipsums="ipsums" />
+   
    </template>
 
 <script>
-import Ipsum from './Ipsum';
+import ipsumApi from '../services/ipsumApi';
+import IpsumList from './IpsumList';
 
 export default {
-  props: {
-    ipsums: Array
+  data() {
+    return {
+      ipsums: ipsumApi.getData(),
+      selected: null,
+    };
+  },
+  methods: {
+    handleSelect(ipsum) {
+      this.selected(ipsum);
+      console.log(this.selected(ipsum));
+    }
   },
   components: {
-    Ipsum
+    IpsumList
   }
 };
 </script>
 
 <style scoped>
-ul {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  }
+
 
 </style>
     

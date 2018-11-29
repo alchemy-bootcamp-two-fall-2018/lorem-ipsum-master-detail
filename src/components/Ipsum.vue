@@ -12,7 +12,8 @@
 <script>
 export default {
   props: {
-    ipsum: Object
+    ipsum: Object,
+    onSelect: Function
   }
 };
 </script>
@@ -35,6 +36,7 @@ li {
     }
   } 
   border: solid 10px #613F75;
+  cursor: pointer;
 }
 /* img {
   position: absolute;
