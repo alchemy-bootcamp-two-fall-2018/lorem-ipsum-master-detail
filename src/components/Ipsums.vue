@@ -1,15 +1,19 @@
 <template>
     <div>
-        Ipsums component
+        Ipsums Component
     <!-- <Ipsum v-for="ipsum in ipsums"
       v-bind:key="ipsum.title"
       v-bind:ipsum="ipsum"/> -->
+      <ipsumApi/>
   </div>
 </template>
 
 <script>
+import ipsumApi from '../ipsumApi.js';
 export default {
-
+    components: {
+        ipsumApi,
+    }
 };
 </script>
 

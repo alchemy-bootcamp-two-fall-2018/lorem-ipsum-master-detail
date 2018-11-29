@@ -1,5 +1,7 @@
 <template>
-    <div></div>
+    <div>
+        Ipsum List
+    </div>
 </template>
 
 <script>

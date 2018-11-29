@@ -1,5 +1,5 @@
 <template>
-    <div></div>
+    <div>Ipsum Detail</div>
 </template>
 
 <script>
