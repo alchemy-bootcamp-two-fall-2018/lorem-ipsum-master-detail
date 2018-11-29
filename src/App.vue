@@ -1,28 +1,13 @@
 <template>
   <div id="app">
-    <Header 
-      :sort="sort" 
-      :filter="filter" 
-      :types="ipsumTypes"/>
-
-    <AddIpsum
-      :onAdd="handleAdd"
-      :ipsumTypes="ipsumTypes"/>
-
-    <Ipsums 
-      :ipsums="sortedipsums" 
-      :onSelect="handleSelect"/>
-
-    <IpsumDetail 
-      :ipsum="selected"
-      :ipsumTypes="ipsumTypes"
-      :onEdit="handleEdit"/>
-
+    <Header />
+    <Ipsums />
   </div>
 </template>
 
-
 <script>
+import Header from './components/Header.vue';
+import Ipsums from './components/Ipsums.vue';
 
 export default {
   name: 'app',
