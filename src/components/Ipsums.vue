@@ -1,34 +1,43 @@
 <template>
-  <ul>
-    <Ipsum v-for="ipsum in ipsums"
-      @click.native="onSelect(ipsum)"
-      :key="ipsum.name"
-      :ipsum="ipsum"/>
-  </ul>
+  <section>
+    <IpsumList 
+      v-bind:ipsums="ipsums"
+      v-bind:onSelect="handleSelect"/>
+    <AddIpsum />
+    <Ipsum />
+    <p>Hello Bob Ross</p>
+  </section>
 </template>
 
 <script>
+import ipsumApi from '../ipsumApi.js';
+import AddIpsum from './AddIpsum.vue';
+import IpsumList from './IpsumList.vue';
 import Ipsum from './Ipsum.vue';
 export default {
-  props: {
-    animals: Array,
-    onSelect: Function
+  data() {
+    return {
+      ipsums: ipsumApi.getIpsums(),
+      selected: null
+    };
   },
   components: {
+    AddIpsum,
+    IpsumList,
     Ipsum
+  },
+  methods: {
+    handleSelect(ipsum) {
+      this.selected = ipsum;
+      console.log('you selected an item');
+    }
   }
 };
 </script>
 
-<style scoped lang="postcss">
-@import '../styles.css';
-ul {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax($card-size, 1fr));
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  max-height: 50vh;
-  overflow-y: auto;
-}
+<style>
+  img {
+    width: 100%;
+    height: auto;
+  }
 </style>

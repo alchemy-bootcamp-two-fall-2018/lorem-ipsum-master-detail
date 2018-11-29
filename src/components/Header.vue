@@ -22,16 +22,11 @@
     </label>
 
     <label>
-      IsPet:
-      <input type="checkbox" v-model="filter.isPet">
-    </label>
-
-    <label>
       Sort By:
       <select v-model="sort.field">
         <option value="name">Name</option>
         <option value="type">Type</option>
-        <option value="weight">Weight</option>
+
       </select>
       <select v-model="sort.direction">
         <option value="1">Asc</option>
@@ -42,13 +37,13 @@
 </template>
 
 <script>
-// import animalsApi from '../services/animalsApi';
+import ipsumsApi from '../ipsumsApi';
 export default {
-  // data() {
-  //   return {
-  //     types: animalsApi.getTypes()
-  //   };
-  // },
+  data() {
+    return {
+      types: animalsApi.getTypes()
+    };
+  },
   props: {
     filter: Object,
     types: Array,

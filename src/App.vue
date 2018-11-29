@@ -26,7 +26,9 @@
 
 export default {
   name: 'app',
-  components: {c
+  components: {
+    Header,
+    Ipsums
   }
 }
 </script>
