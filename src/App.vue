@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header/>
-    <h2>Do I Exist</h2>
+    <h2>Does This App.vue Render Its Template?</h2>
   </div>
 </template>
 
