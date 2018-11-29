@@ -25,7 +25,7 @@
             <span>Body: </span>
             <textarea></textarea>
         </label>
-        <button>Add an ipsum!</button>
+        <button @click.prevent = "onAdd">Add an ipsum!</button>
         <button @click.prevent = "onCancel">Cancel</button>
     </form>
     </div>
@@ -34,7 +34,8 @@
 <script>
 export default {
   props: {
-    onCancel: Function
+    onCancel: Function,
+    onAdd: Function
   }
 
 };

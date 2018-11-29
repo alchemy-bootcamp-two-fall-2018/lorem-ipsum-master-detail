@@ -11,7 +11,8 @@
         </div>
         <div v-else>
             <h3>Add your own Ipsum!</h3>
-            <IpsumForm :onCancel = "() => show = false" />
+            <IpsumForm :onCancel = "() => show = false"
+                :onAdd="handleAdd" />
         </div>
     </section>
 </template>
@@ -28,7 +29,8 @@ export default {
   },
 
   props: {
-    ipsum: Object
+    ipsum: Object,
+    onAdd: Function
   },
 
   components: {
@@ -37,8 +39,9 @@ export default {
   },
 
   methods: {
-    handleAdd(){
+    handleAdd(ipsum){
       this.show = true;
+      this.onAdd(ipsum);
     }
   }
 };

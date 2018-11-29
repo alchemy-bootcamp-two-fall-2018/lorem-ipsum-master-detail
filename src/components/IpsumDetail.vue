@@ -5,7 +5,7 @@
         <p>Author: {{ipsum.author}}</p>
         <p>Published: {{ipsum.publishedOn}}</p>
         <p><a v-bind:href="ipsum.authorUrl">Learn more about the author.</a></p>
-        <p v-html="ipsum.body"></p>
+        <p id="ipsum-body" v-html="ipsum.body"></p>
     </div>
 </template>
 
