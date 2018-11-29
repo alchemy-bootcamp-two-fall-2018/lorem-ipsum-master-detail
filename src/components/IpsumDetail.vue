@@ -1,7 +1,9 @@
 <template>
   <div>
      {{ipsum.name}}
-     {{ipsum.author}}
+     By {{ipsum.author}} <br />
+     Category: {{ipsum.category}}
+     
         
   </div>
 </template>
