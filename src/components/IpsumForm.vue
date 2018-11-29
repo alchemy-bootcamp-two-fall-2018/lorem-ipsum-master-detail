@@ -22,6 +22,10 @@
         </label>
         <label>
             <span></span>
+            <textarea v-model.trim="ipsum.body" required></textarea>
+        </label>
+        <label>
+            <span></span>
             <button type="submit">{{ ipsumToUpdate ? 'Update':'Add'}}</button>
         </label>
     </form>
@@ -49,8 +53,9 @@ export default {
 
 <style>
 label {
+    display:flex;
     background-color:white;
-    padding:5px;
+    padding:10px;
 }
 input {
     border: solid 0.4px;
