@@ -1,12 +1,17 @@
 <template>
-    <ul>
-      Ipsum list component
-    </ul>
+    <li>
+      <div>
+        <h3>{{ipsum.title}}</h3>
+      </div>
+    </li>
 </template>
 
 <script>
-export default {
 
+export default {
+  props: {
+    ipsum: Object
+  }
 };
 </script>
 

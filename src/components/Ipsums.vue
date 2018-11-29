@@ -1,7 +1,10 @@
 <template>
-    <div>
-      <IpsumList/>  
-    </div>
+    <ul>
+      <IpsumList v-for="ipsum in ipsums"
+        :key="ipsum.title"
+        :ipsum="ipsum"/>
+    {{IpsumList}}
+    </ul>
 </template>
 
 <script>
