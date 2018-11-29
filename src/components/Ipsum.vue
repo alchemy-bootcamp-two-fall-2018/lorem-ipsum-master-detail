@@ -1,8 +1,11 @@
 <template>
     <div id="ipsum-container">
-        <h3>Ipsum</h3>
-        <IpsumDetail/>
-        <IpsumForm/>
+        <IpsumDetail
+        :ipsum="ipsum"
+        />
+        <IpsumForm
+        :ipsum="ipsum"
+        />
     </div>
 </template>
 
@@ -11,6 +14,9 @@ import IpsumDetail from './IpsumDetail.vue';
 import IpsumForm from './IpsumForm.vue';
 
 export default {
+    props: {
+        ipsum: Object
+    },
     components: {
         IpsumDetail,
         IpsumForm

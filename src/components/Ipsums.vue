@@ -1,7 +1,9 @@
 <template>
     <div id="ipsums-container">
         <h2>Ipsums</h2>
-        <Ipsum/>
+        <Ipsum
+        :ipsum="selected"
+        />
         <IpsumList
         :ipsums="ipsums"
         :onSelect="handleSelect"
@@ -17,7 +19,8 @@ export default {
     data() {
         return {
             ipsums: ipsumApi.getAll(),
-        }
+            selected: null
+        };
     },
     components: {
         IpsumList,
@@ -26,7 +29,6 @@ export default {
     methods: {
         handleSelect(ipsum) {
             this.selected = ipsum;
-            console.log(ipsum, 'you selected that');
         }
     }
 }
