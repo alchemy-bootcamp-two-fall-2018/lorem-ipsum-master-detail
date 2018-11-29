@@ -5,8 +5,7 @@
                     :onSelect="handleSelect"/>
         <Ipsum v-if="ipsum"
                 :ipsum="ipsum"
-                :onUpdate="handleUpdate"
-                :onCancel="handleCancel"/>
+                :onUpdate="handleUpdate"/>
         <p v-else>Click on an author!</p>
     </section>
 </template>
@@ -43,9 +42,6 @@ export default {
             let index = this.ipsums.indexOf(this.ipsum);
             this.ipsums.splice(index, 1, updateIpsum);
             this.ipsum = updateIpsum;
-        },
-        handleCancel() {
-            console.log('cancel');
         }
     }
 };

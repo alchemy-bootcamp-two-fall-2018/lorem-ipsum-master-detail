@@ -23,7 +23,6 @@ export default {
         ipsum: Object,
         onEdit: Function,
         onUpdate: Function,
-        onCancel: Function
     },
     components: {
         IpsumDetail,
@@ -32,6 +31,9 @@ export default {
     methods: {
         handleEdit() {
             this.edit = true;
+        },
+        onCancel() {
+            this.edit = false;
         }
     }
 };
