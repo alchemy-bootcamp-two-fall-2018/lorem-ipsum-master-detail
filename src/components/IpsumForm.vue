@@ -1,38 +1,50 @@
 <template>
     <div>
-    <form>
+    <form @submit.prevent="onAdd(ipsum)">
         <label for="">
             <span>Title: </span>
-            <input type="text">
+            <input v-model="ipsum.title" type="text">
         </label>
         <label for="">
             <span>Category: </span>
-            <input type="text">
+            <input v-model="ipsum.category" type="text">
         </label>
         <label for="">
             <span>Author: </span>
-            <input type="text">
+            <input v-model="ipsum.author" type="text">
         </label>
         <label for="">
             <span>Author Url:</span>
-            <input type="text">
+            <input v-model="ipsum.authorUrl" type="text">
         </label>
         <label for="">
             <span>Published on: </span>
-            <input type="text">
+            <input v-model="ipsum.publishedOn" type="text">
         </label>
         <label for="">
             <span>Body: </span>
-            <textarea></textarea>
+            <textarea v-model="ipsum.body"></textarea>
         </label>
-        <button @click.prevent = "onAdd">Add an ipsum!</button>
-        <button @click.prevent = "onCancel">Cancel</button>
+        <button type="submit">Add an ipsum!</button>
+        <button @click = "onCancel">Cancel</button>
     </form>
     </div>
 </template>
 
 <script>
 export default {
+  data() {
+    return {
+      ipsum: {
+        title: '',
+        category: '',
+        author: '',
+        authorUrl: '',
+        publishedOn: '',
+        body: '',
+      }
+    };
+  },
   props: {
     onCancel: Function,
     onAdd: Function
