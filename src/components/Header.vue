@@ -18,9 +18,7 @@ header{
     height: 300px;
     background-color:aquamarine;
 
-    .logo {
-        
-    }
-}
+    
+};
 
 </style>
