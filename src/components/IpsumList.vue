@@ -12,16 +12,16 @@
 </template>
 
 <script>
-import IpsumItem from './IpsumItem.vue'
+import IpsumItem from './IpsumItem.vue';
 
 export default {
-    props: {
-      ipsums: Array,
-      onSelect: Function
-    },
-    components: {
-      IpsumItem
-    }
+  props: {
+    ipsums: Array,
+    onSelect: Function
+  },
+  components: {
+    IpsumItem
+  }
 };
 </script>
 
