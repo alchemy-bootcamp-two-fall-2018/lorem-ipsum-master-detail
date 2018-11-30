@@ -13,13 +13,13 @@ export default {
 
   data() {
     return {
-    }
+    };
   },
   components: {
     Header,
     Ipsums,
   }
-}
+};
 
 
 </script>

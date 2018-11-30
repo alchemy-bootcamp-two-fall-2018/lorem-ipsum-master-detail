@@ -9,11 +9,11 @@
 
 <script>
 export default {
-    props: {
-        ipsum: Object
-    }
+  props: {
+    ipsum: Object
+  }
 
-}
+};
 </script>
 
 <style>

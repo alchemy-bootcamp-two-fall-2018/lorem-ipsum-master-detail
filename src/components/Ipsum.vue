@@ -9,15 +9,15 @@
 <script>
 import IpsumDetail from './IpsumDetail.vue';
 export default {
-    components: {
-        IpsumDetail
-    },
-    props: {
-        ipsum: Object
-    }
+  components: {
+    IpsumDetail
+  },
+  props: {
+    ipsum: Object
+  }
 
 
-}
+};
 </script>
 
 <style>

@@ -14,26 +14,26 @@ import IpsumList from './IpsumList.vue';
 import Ipsum from './Ipsum.vue';
 
 export default {
-    data() {
-        return {
-            ipsums: ipsumsApi.getAll(),
-            selected: null
-    }
+  data() {
+    return {
+      ipsums: ipsumsApi.getAll(),
+      selected: null
+    };
   },
-    //passing down to child
-    components: {
-        IpsumList,
-        Ipsum
-    },
+  //passing down to child
+  components: {
+    IpsumList,
+    Ipsum
+  },
 
-    methods: {
-        handleSelect(ipsum) {
-            this.selected = ipsum;
-        }
-
+  methods: {
+    handleSelect(ipsum) {
+      this.selected = ipsum;
     }
 
-}
+  }
+
+};
 </script>
 
 <style>
