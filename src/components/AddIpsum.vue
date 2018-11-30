@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import IpsumForm from './IpsumForm.vue'
+import IpsumForm from './IpsumForm.vue';
 export default {
   data() {
     return {

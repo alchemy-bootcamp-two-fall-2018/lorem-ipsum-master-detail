@@ -17,27 +17,27 @@ import IpsumList from './IpsumList.vue';
 import Ipsum from './Ipsum.vue';
 
 export default {
-    data() {
-        return {
-        ipsums: ipsumApi.getIpsums(),
-        selected: null
-        };
-    },
-    components: {
-        AddIpsum,
-        IpsumList,
-        Ipsum
-    },
-    methods: {
-        handleSelect(ipsum) {
-            this.selected = ipsum;
+  data() {
+    return {
+      ipsums: ipsumApi.getIpsums(),
+      selected: null
+    };
+  },
+  components: {
+    AddIpsum,
+    IpsumList,
+    Ipsum
+  },
+  methods: {
+    handleSelect(ipsum) {
+      this.selected = ipsum;
             
-        },
-        handleAdd(ipsum) {
-            this.ipsums.push(ipsum);
-            this.handleSelect(ipsum);
-        }
+    },
+    handleAdd(ipsum) {
+      this.ipsums.push(ipsum);
+      this.handleSelect(ipsum);
     }
+  }
 };
 </script>
 

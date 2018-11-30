@@ -19,14 +19,14 @@ li {
     position: relative;
     height: 150px;
     border: 5px solid;
-    background: black;
+    background: #57D584;
     border: 3px solid navy;
     padding: 10px;
     margin-bottom: 10px;
-    box-shadow: 2px 2px 2px black;
+    box-shadow: 2px 2px 2px white;
   }
   .boxes{
-    color: white;
+    color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
   }

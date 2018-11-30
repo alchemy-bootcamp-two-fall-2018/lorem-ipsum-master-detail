@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import IpsumDetail from './IpsumDetail.vue'
+import IpsumDetail from './IpsumDetail.vue';
 
 
 export default {
