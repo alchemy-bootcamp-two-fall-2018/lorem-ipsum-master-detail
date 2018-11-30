@@ -1,9 +1,12 @@
 <template>
     <div class="detail" v-if="ipsum">
         <h3> {{ ipsum.title }} - {{ ipsum.category }} category </h3>
-        <h3> Author: {{ ipsum.author }} - published on {{ ipsum.publishedOn }}</h3>
-        <h3> Example copy: </h3>
+        <p> Author: {{ ipsum.author }} - published on {{ ipsum.publishedOn }}</p>
+        <p> Example copy: </p>
         <p class="body-copy" v-html="ipsum.body"></p>
+    </div>
+    <div v-else>
+        <p>Please select an Ipsum!</p>
     </div>
 </template>
 

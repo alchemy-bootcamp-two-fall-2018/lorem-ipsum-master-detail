@@ -19,9 +19,10 @@ export default {
     li {
         text-align: center;
         list-style: none;
-        background: lightgoldenrodyellow;
+        background: rgb(127, 180, 224);
         box-shadow: 5px 10px 10px grey;
         height: 50px;
         cursor: pointer;
+        border-radius: 10px;
     }
 </style>

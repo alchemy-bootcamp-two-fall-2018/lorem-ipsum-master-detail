@@ -1,13 +1,12 @@
 <template>
     <div v-if="add">
-        <IpsumForm/>
+        <IpsumForm onAdd="handleAdd"/>
     </div>
     <div v-else>
         <button @click="add=true" >Add an Ipsum!</button> 
         <IpsumDetail
         :ipsum="ipsum"/>   
     </div>
-    
 </template>
 
 <script>
@@ -26,6 +25,11 @@ export default {
   },
   props: {
     ipsum: Object
+  },
+  methods: {
+    handleAdd(ipsum) {
+      this.ipsumdata.push(ipsum);
+    }
   }
 };
 </script>

@@ -1,30 +1,30 @@
 <template>
-  <div>
+  <section>
     <h3>Add an Ipsum!</h3>
-    <form>
+    <form @submit.prevent="onAdd(ipsum)">
       <label>
         <span>Title:</span>
-        <input>
+        <input v-model="ipsum.title" required>
       </label>
       <label>
         <span>Category:</span>
-        <input>
+        <input v-model="ipsum.category" required>
       </label>
       <label>
         <span>Author:</span>
-        <input>
+        <input v-model="ipsum.author" required>
       </label>
       <label>
         <span>Author URL:</span>
-        <input>
+        <input v-model="ipsum.authorURL" required>
       </label>      
       <label>
         <span>Published On:</span>
-        <input>
+        <input v-model="ipsum.publishedOn" required>
       </label>
       <label>
         <span>Body Copy:</span>
-        <input>
+        <textarea v-model="ipsum.body"></textarea>
       </label>
       <label>
         <span>
@@ -32,12 +32,26 @@
         </span>
       </label>
     </form>
-  </div>
+  </section>
 </template>
 
 <script>
 export default {
-
+  data() {
+    return {
+      ipsum: {
+        title: '',
+        category: '',
+        author: '',
+        authorUrl: '',
+        publishedOn: '',
+        body:''
+      }
+    };
+  },
+  props: {
+    onAdd: Function
+  }
 };
 </script>
 
