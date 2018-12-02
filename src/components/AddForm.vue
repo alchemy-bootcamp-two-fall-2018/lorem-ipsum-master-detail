@@ -1,6 +1,6 @@
 <template>
     <div>
-        <form @sumbit.prevent="onAdd(data)">
+        <form @submit.prevent="onAdd(data)">
             <label> Title:
                 <input v-model="data.title">
             </label>
@@ -8,7 +8,6 @@
                 <input v-model="data.author">
             </label>
         <button type="button" @click.prevent="onAdd(data)"> Add </button>
-        <button type="button" @click="onCancel">Cancel</button>
 
         </form>
         
@@ -29,7 +28,6 @@ export default {
     },
     props: {
         onAdd: Function, 
-        onCancel: Function,
         dataToUpdate: Object
     }
 

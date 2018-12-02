@@ -50,7 +50,7 @@ export default {
         },
         handleAdd(ipsum) {
             this.data.push(ipsum);
-            this.handleSelect(ipsum);
+            this.ipsum = {};
             console.log('you have added', ipsum);
         }, 
     },
