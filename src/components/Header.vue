@@ -1,6 +1,6 @@
 <template>
     <div class='header'>
-        <p>Ipsums R Us</p>
+        <p>ColorOtherIpsums, Inc.</p>
     </div>
 </template>
 
@@ -12,8 +12,13 @@ export default {
 
 <style>
     .header {
-        background-color: blue;
-        color: red;
-        font-size: 36px;
+        background-color: rgb(73, 10, 61);
+        color: rgb(189, 21, 80);
+        font-size: 48px;
+        border: 4px solid black;
+        border-radius: 10px;
+        text-align: center;
+        padding: 0%;
+        margin:0%;
     }
 </style>

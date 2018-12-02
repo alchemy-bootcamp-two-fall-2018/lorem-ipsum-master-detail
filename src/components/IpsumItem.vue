@@ -1,8 +1,7 @@
 <template>
-    <div>
+    <div class="cards">
         <p>{{ipsum.title}}</p>
-        <p>Topic: {{ipsum.category}}</p>
-             
+        <p>Topic: {{ipsum.category}}</p>         
     </div>
 </template>
 
@@ -15,8 +14,10 @@ export default {
 </script>
 
 <style>
-    div {
-         border: 1px solid black;
-         text-align: center;
+    .cards {
+        border: 1px solid black;
+        text-align: center;
+        border-radius: 15px;
+        background-color: yellow;
     }
 </style>

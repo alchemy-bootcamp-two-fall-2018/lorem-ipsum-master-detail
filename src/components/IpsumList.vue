@@ -1,6 +1,7 @@
 <template>
     <ul>
         <IpsumItem  v-for="ipsum in ipsums"
+            @click.native="onSelect(ipsum)"
             :key="ipsum.title"
             :ipsum="ipsum"/>
     </ul>
@@ -8,15 +9,17 @@
 
 <script>
 import IpsumItem from './IpsumItem';
-// import Ipsum from './Ipsum';
+
 
 export default {
     props: {
-        ipsums: Array
+        ipsums: Array,
+        onSelect: Function
     },
 
     components: {
         IpsumItem,
+        // Ipsum
     }
 };
 
@@ -29,6 +32,5 @@ export default {
         list-style-type: none;
         margin: 0;
         padding: 0;
-       
     }
 </style>
