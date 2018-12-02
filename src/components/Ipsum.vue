@@ -1,10 +1,12 @@
 <template>
-    <div>
-        <h1>Select a Lorem Ipsum to Read More</h1>
+    <div v-if="ipsum">
         <IpsumDetail 
             v-bind:ipsum="ipsum"/>
         <IpsumForm/>
-   </div>
+    </div>
+    <div v-else>
+        <h1>Select a Lorem Ipsum to Read More</h1>
+    </div>
 </template>
 
 <script>
