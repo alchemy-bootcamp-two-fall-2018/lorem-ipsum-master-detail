@@ -11,11 +11,9 @@
 import IpsumDetail from './IpsumDetail.vue';
 import IpsumForm from './IpsumForm.vue';
 
-
 export default {
     props: {
         ipsum: Object,
-
     },
     components: {
         IpsumDetail,
