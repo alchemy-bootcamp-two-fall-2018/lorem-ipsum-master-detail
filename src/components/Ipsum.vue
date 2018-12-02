@@ -23,11 +23,7 @@ export default {
         IpsumDetail
     }
 };
-
 </script>
 
 <style>
-
 </style>
-
-// need to add to components in IpsumList.vue if info goes there

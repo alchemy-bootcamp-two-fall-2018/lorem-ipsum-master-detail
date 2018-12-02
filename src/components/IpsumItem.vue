@@ -18,6 +18,6 @@ export default {
         border: 1px solid black;
         text-align: center;
         border-radius: 15px;
-        background-color: yellow;
+        background-color: rgb(248, 202, 0);
     }
 </style>

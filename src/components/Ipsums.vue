@@ -44,13 +44,13 @@ export default {
 
 <style>
 body {
-    background-color: red;
+    background-color: rgb(138, 155, 15);
 }
 h1 {
     text-align: center;
 }
 .addbox {
-    background-color: green;
+    background-color: rgb(189, 21, 80);
     border: 1px solid black;
     border-radius: 5px;
     text-align: center;
