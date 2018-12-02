@@ -1,5 +1,6 @@
 <template>
     <header>
+        <AddIpsum/>
         <Ipsum
             v-bind:key="ipsums.title"
             v-bind:ipsum="selected"
@@ -16,6 +17,7 @@
 import IpsumList from './IpsumList.vue';
 import ipsumsApi from '../assets/ipsumApi.js';
 import Ipsum from './Ipsum.vue';
+import AddIpsum from './AddIpsum';
 export default {
     data() {
         return {
@@ -26,7 +28,9 @@ export default {
     
     components: {
         IpsumList,
-        Ipsum
+        Ipsum,
+        AddIpsum
+
     },
     methods: {
         handleSelect(ipsum) {

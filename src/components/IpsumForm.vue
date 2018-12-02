@@ -1,8 +1,10 @@
 <template>
-        <form>
+        <form @submit.prevent="onAdd(ipsum)">
              <label>
                 <span>Title:</span>
-                <input type="text" v-model="ipsum.title">
+                <input v-model="ipsum.title">
+            </label>
+            <label>
             </label>
         </form>
 </template>
@@ -10,15 +12,18 @@
 <script>
 export default {
     data() {
-        const update = this.ipsum;
+        const update = this.ipsumToUpdate || {};
         return {
+            ipsum: {
+                title: ''
+            }
 
-            update
         };
         
     },
     props: {
-        ipsum: Object
+        ipsumToUpdate: Object,
+        onAdd: Function
     }
 };
 </script>

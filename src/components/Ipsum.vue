@@ -2,7 +2,6 @@
     <div v-if="ipsum">
         <IpsumDetail 
             v-bind:ipsum="ipsum"/>
-        <IpsumForm/>
     </div>
     <div v-else>
         <h1>Select a Lorem Ipsum to Read More</h1>
