@@ -40,9 +40,16 @@ export default {
     },
     methods: {
         handleAdd(ipsum) {
-            this.show = false;
-            this.onAdd(ipsum);
-        }
+            this.data.push(ipsum);
+            this.handleSelect(ipsum);
+            console.log('you have added', ipsum);
+        }, 
+    // }, 
+    // handleAdd(ipsum) {
+    //     this.data.push(ipsum);
+    //     this.handleSelect(ipsum);
+    //     console.log('you have added', ipsum);
+    // }, 
     }
 };
 </script>

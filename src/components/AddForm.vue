@@ -1,13 +1,13 @@
 <template>
     <div>
-        <form @sumbit.prevent="onAdd(ipsum)">
+        <form @sumbit.prevent="onAdd(data)">
             <label> Title:
-                <input v-model="ipsum.title">
+                <input v-model="data.title">
             </label>
             <label> Author:
-                <input v-model="ipsum.author">
+                <input v-model="data.author">
             </label>
-        <button type="button" @click.prevent="onAdd"> Add </button>
+        <button type="button" @click.prevent="onAdd(data)"> Add </button>
         <button type="button" @click="onCancel">Cancel</button>
 
         </form>
@@ -18,9 +18,9 @@
 <script>
 export default {
     data() {
-        const update = this.ipsumToUpdate || {};
+        const update = this.dataToUpdate || {};
         return {
-            ipsum: {
+            data: {
                 title: update.title || '',
                 author: update.author || '',
 
@@ -30,7 +30,7 @@ export default {
     props: {
         onAdd: Function, 
         onCancel: Function,
-        ipsumToUpdate: Object
+        dataToUpdate: Object
     }
 
 };

@@ -48,11 +48,11 @@ export default {
             console.log('you have selected', ipsum);
 
         },
-        handleAdd(ipsumData) {
-            this.data.push(ipsumData);
-            this.handleSelect(ipsumData);
-            console.log('you have added', ipsumData);
-        }
+        handleAdd(ipsum) {
+            this.data.push(ipsum);
+            this.handleSelect(ipsum);
+            console.log('you have added', ipsum);
+        }, 
     },
 
 };
