@@ -18,13 +18,11 @@
             </label>
             <label>
                 <button type="submit">Add</button>
-                <button type="reset">Cancel</button>
             </label>
         </form>
 </template>
 
 <script>
-// import ipsumApi from '../assests/ipsumApi';
 export default {
     data() {
         return {
@@ -47,5 +45,4 @@ export default {
 form {
     border: 2px solid navy;
 }
-
 </style>

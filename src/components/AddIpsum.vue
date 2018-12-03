@@ -12,6 +12,7 @@
 </template>
 
 <script>
+
 import IpsumForm from './IpsumForm';
 export default {
     data() {
@@ -31,10 +32,5 @@ export default {
             this.onAdd(ipsum);
         }
     }
-
 };
 </script>
-
-<style>
-
-</style>

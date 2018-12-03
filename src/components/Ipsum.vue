@@ -10,7 +10,6 @@
 
 <script>
 import IpsumDetail from './IpsumDetail.vue';
-import IpsumForm from './IpsumForm.vue';
 
 export default {
     props: {
@@ -18,12 +17,6 @@ export default {
     },
     components: {
         IpsumDetail,
-        IpsumForm
     },
 };
-
 </script>
-
-<style>
-
-</style>

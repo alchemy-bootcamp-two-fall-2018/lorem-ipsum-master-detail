@@ -24,6 +24,4 @@ div {
     border: 1px solid gray;
     align-content: center;
 }
-
-
 </style>

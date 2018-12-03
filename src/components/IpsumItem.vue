@@ -7,9 +7,6 @@
         </div>
     </li>
 </template>
-                
-
-import ipsum from '/assets/ipsumApi.js';
 
 <script>
 export default {

@@ -7,14 +7,11 @@
 
 <script>
 export default {
-
 };
 </script>
 
 <style scoped>
-
 img {
     border: 2px solid black;
 }
-
 </style>
