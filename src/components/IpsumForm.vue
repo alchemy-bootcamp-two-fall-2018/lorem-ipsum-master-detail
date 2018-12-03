@@ -48,4 +48,8 @@ export default {
 
 <style>
 
+label {
+    display: inline-block;
+    text-align: center;
+}
 </style>
