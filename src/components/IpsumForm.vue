@@ -28,8 +28,9 @@
       </label>
       <label>
         <span>
-          <button type="button">Add</button>
+          <button type="submit">Add</button>
         </span>
+        <button type="button" @click="onCancel">Cancel</button>
       </label>
     </form>
   </section>
@@ -50,7 +51,8 @@ export default {
     };
   },
   props: {
-    onAdd: Function
+    onAdd: Function,
+    onCancel: Function,
   }
 };
 </script>
