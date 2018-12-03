@@ -12,7 +12,7 @@
 </div>
 
 <div v-else>
-  <h4 class="select-ipsum"> Click on Ipsum for details </h4>
+  <p class="select-ipsum"> Click on Ipsum for details </p>
 </div>  
 </template>
 
@@ -50,9 +50,8 @@ p.details {
     color:steelblue;
     margin-bottom: 40px;
 }
-h4.select-ipsum {
+p.select-ipsum {
     font-size: 20px;
-    font-style: italic;
     color:white;
     font-weight: bold;
     background-color:steelblue;

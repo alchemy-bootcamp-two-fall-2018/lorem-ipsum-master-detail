@@ -5,14 +5,16 @@
   :ipsums="data"
   :onSelect="handleSelect"
   />
+  <AddIpsum :onAdd="handleAdd"/>
   <Ipsum :ipsum="selected" />
   </div>
 </template>
 
 <script>
 import dataApi from '../../dataApi.js';
-import IpsumList from './IpsumList.vue';
-import Ipsum from './Ipsum.vue';
+import IpsumList from './IpsumList';
+import Ipsum from './Ipsum';
+import AddIpsum from './AddIpsum';
 
 
 export default {
@@ -25,13 +27,19 @@ export default {
 
     components: {
         IpsumList,
-        Ipsum
+        Ipsum,
+        AddIpsum
     },
     methods: {
         handleSelect(ipsum) {
             this.selected = ipsum;
             console.log('handled', this.selected);
-        } 
+        },
+        handleAdd(ipsum) {
+            this.data.push(ipsum);
+            this.handleSelect(ipsum);
+        }
+
     
     }
 
