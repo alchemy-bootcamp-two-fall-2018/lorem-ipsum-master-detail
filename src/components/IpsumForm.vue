@@ -1,10 +1,12 @@
 <template>
-        <form @submit.prevent="onAdd(ipsum)">
+        <form @submit="onAdd(ipsum)">
              <label>
                 <span>Title:</span>
                 <input v-model="ipsum.title">
             </label>
             <label>
+                <button type="submit">Add</button>
+                <button type="button" @click="onCancel">Cancel</button>
             </label>
         </form>
 </template>
@@ -15,15 +17,14 @@ export default {
         const update = this.ipsumToUpdate || {};
         return {
             ipsum: {
-                title: ''
+                title:  update.title || ''
             }
-
         };
-        
     },
     props: {
-        ipsumToUpdate: Object,
-        onAdd: Function
+        onAdd: Function,
+        onCancel: Function,
+        ipsumToUpdate: Object
     }
 };
 </script>

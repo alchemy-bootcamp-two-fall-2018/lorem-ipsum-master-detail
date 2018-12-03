@@ -4,7 +4,8 @@
             Add Ipsum form goes here.
         
         </h3>
-        <IpsumForm/>
+        <IpsumForm
+            :onAdd="handleAdd"/>
     </section>
 </template>
 
@@ -15,8 +16,15 @@ export default {
         IpsumForm
     },
     props: {
-        ipsum: Object
-    } 
+        ipsum: Object,
+        onAdd: Function
+    }, 
+    methods: {
+        handleAdd(ipsum) {
+            console.log(ipsum);
+            this.onAdd(ipsum);
+        }
+    }
 
 };
 </script>
