@@ -1,30 +1,44 @@
 <template>
-        <form @submit="onAdd(ipsum)">
-             <label>
+        <form @submit.prevent="onAdd(ipsum)">
+            <label>
                 <span>Title:</span>
-                <input v-model="ipsum.title">
+                <input v-model="ipsum.title" required>
+            </label>
+             <label>
+                <span>Author:</span>
+                <input v-model="ipsum.author" required>
+            </label>
+             <label>
+                <span>Category:</span>
+                <input v-model="ipsum.category" required>
+            </label>
+             <label>
+                <span>Body:</span>
+                <input v-model="ipsum.body" required >
             </label>
             <label>
                 <button type="submit">Add</button>
-                <button type="button" @click="onCancel">Cancel</button>
+                <button type="reset">Cancel</button>
             </label>
         </form>
 </template>
 
 <script>
+// import ipsumApi from '../assests/ipsumApi';
 export default {
     data() {
-        const update = this.ipsumToUpdate || {};
         return {
             ipsum: {
-                title:  update.title || ''
+                title: '',
+                author: '',
+                category: '',
+                body: ''
             }
         };
     },
     props: {
         onAdd: Function,
-        onCancel: Function,
-        ipsumToUpdate: Object
+        onCancel: Function
     }
 };
 </script>

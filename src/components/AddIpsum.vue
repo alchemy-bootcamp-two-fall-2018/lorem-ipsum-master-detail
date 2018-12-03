@@ -1,27 +1,33 @@
 <template>
     <section>
-        <h3>
-            Add Ipsum form goes here.
-        
-        </h3>
+        <div v-if="!show">
+            <button @click="show = true">ADD A NEW IPSUM</button>
+        </div>
+        <div v-else>
         <IpsumForm
-            :onAdd="handleAdd"/>
+            :onAdd="handleAdd"
+            :onCancel="() => show = false"/>
+        </div>
     </section>
 </template>
 
 <script>
 import IpsumForm from './IpsumForm';
 export default {
+    data() {
+        return {
+            show: false
+        };
+    },
     components: {
         IpsumForm
     },
     props: {
-        ipsum: Object,
         onAdd: Function
     }, 
     methods: {
         handleAdd(ipsum) {
-            console.log(ipsum);
+            this.show = false;
             this.onAdd(ipsum);
         }
     }
