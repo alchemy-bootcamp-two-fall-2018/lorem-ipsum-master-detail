@@ -6,7 +6,9 @@
     <div v-else>
       <h2>Add a new Ipsum</h2>
       <IpsumForm
-        :onAdd="handleAdd" />
+        :onAdd="handleAdd" 
+         :onCancel="() => show = false"
+      />
     </div>
   </section>
 </template>

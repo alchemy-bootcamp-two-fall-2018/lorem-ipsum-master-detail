@@ -37,6 +37,7 @@
       <label>
         <span></span>
         <button type="submit">Add</button>
+        <button type="button" @click="onCancel">Cancel</button>
       </label>
     
     </form>
@@ -60,6 +61,7 @@ export default {
     },
     props: {
         onAdd: Function,
+        onCancel: Function
     }
 };
 </script>
