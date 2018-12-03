@@ -6,16 +6,10 @@
         <IpsumsList
         :Ipsums="data"
         :onSelect="handleSelect"/> 
-
-
         <Ipsum
         :selected="selected"
         />
-        
         <AddForm :onAdd="handleAdd"/>
-        
-
-
     </div>
 
 </template>
