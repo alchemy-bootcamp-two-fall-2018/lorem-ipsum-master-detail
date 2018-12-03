@@ -6,7 +6,6 @@
     <div v-else>
       <h2>Add a new Ipsum</h2>
       <IpsumForm
-        :ipsums="ipsums"
         :onAdd="handleAdd" />
     </div>
   </section>
@@ -25,7 +24,6 @@ export default {
         IpsumForm
     },
     props: {
-        ipsums: Array,
         onAdd: Function
     },
     methods: {
@@ -40,8 +38,13 @@ export default {
 <style scoped>
 section {
   padding: 10px;
+  background: skyblue;
 }
 button {
   border-radius: 15px;
+  font-size: 1em;
+  font-weight: bolder;
+  background-color: steelblue;
+  color: white;
 }
 </style>

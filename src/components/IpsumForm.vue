@@ -1,6 +1,6 @@
 <template>
 
-<section>
+  <section>
 
     <form @submit.prevent="onAdd(ipsum)">
       <label>
@@ -54,7 +54,8 @@ export default {
                 authorUrl: '',
                 publishedOn: '',
                 body: ''
-            }
+            },
+            show:false
         };
     },
     props: {
@@ -68,18 +69,31 @@ export default {
     text-align: center;
     margin-left: 20%;
   }
-  
+
+   button {
+    border: 2px solid white;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 0.75em;
+    padding: 6px;
+    background-color: steelblue;
+    color: white;
+  }
   span {
     width: 190px;
     display: inline-block;
   }
-  
   label {
     display: flex;
     padding: 5px;
     font-size: 1.1em;
     font-weight: 500;
   }
-  
+  input, textarea {
+    width: 450px;
+  }
+  textarea {
+    height: 50px;
+  }
 </style>
 
