@@ -45,27 +45,34 @@ export default {
 </script>
 
 <style>
-form {
-  display: flex;
-  text-align: center;
-}
-span {
-  width: 150px;
-  display: inline-block;
-}
-input, textarea {
-  width: 200px;
-}
-label {
-  display: flex;
-  padding: 10px;
-  font-size: 2em;
-  font-weight: 2pt;
-}
-textarea {
-  height: 100px;
-}
- @media only screen and (max-width: 1160px) {
+ form {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+  button {
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 0.75em;
+  }
+  .button {
+    display: block;
+  }
+  span {
+    display: inline-block;
+  }
+  input, textarea {
+    height: 20px;
+    width: 13vw;
+  }
+  label {
+    display: flex;
+    padding: 5px;
+    font-size: 1.1em;
+    font-weight: 500;
+  }
+  @media only screen and (max-width: 1160px) {
     form {
       text-align: center;
       display: flex;
@@ -74,10 +81,10 @@ textarea {
       margin-left: 5%;
     }
     span {
-      width: 60px;
+      width: 90px;
     }
     input, textarea {
-    width: 40vw;
+    width: 60vw;
     height: 20px;
     }
   }
