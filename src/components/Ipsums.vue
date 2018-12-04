@@ -5,7 +5,6 @@
       v-bind:onSelect="handleSelect"/>
     <AddIpsum />
     <Ipsum />
-    <p>Hello Bob Ross</p>
   </section>
 </template>
 

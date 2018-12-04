@@ -1,7 +1,7 @@
 <template>
   <li>
-    <p>Title: {{ ipsum.title }}</p>
-    <p>Category: {{ ipsum.category }}</p>
+    <p class="name tiles">{{ ipsum.title }}</p>
+    <p class="tiles">Category: {{ ipsum.category }}</p>
   </li>
 </template>
 
