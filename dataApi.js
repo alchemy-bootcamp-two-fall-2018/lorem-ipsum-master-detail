@@ -7,7 +7,7 @@ export default {
     addIpsum(ipsum) {
         ipsum.title = '',
         ipsum.author = '',
-        ipsum.push();
+        data.push(ipsum);
         return ipsum;
     }
 };

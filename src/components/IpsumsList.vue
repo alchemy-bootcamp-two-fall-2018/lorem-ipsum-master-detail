@@ -1,8 +1,8 @@
 <template>
     <div>
         <ul>
-        <Ipsum v-for="Ipsum in Ipsums"
-            :key="Ipsum.author"
+        <Ipsum v-for="(Ipsum, i) in Ipsums"
+            :key="i"
             :Ipsum="Ipsum"
             v-bind:class="{ Ipsum: true, selected: Ipsum === selected}"
             v-on:click.native="onSelect(Ipsum)"
@@ -18,7 +18,8 @@ import Ipsum from './IpsumsItem.vue';
 export default {
     props: {
         Ipsums: Array,
-        onSelect: Function
+        onSelect: Function,
+        selected: Object
     },
 
     components: {
