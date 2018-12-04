@@ -18,8 +18,7 @@ export default {
   },
   components:{
     IpsumItem,    
-        
-        
+         
   },
 
   props: {
