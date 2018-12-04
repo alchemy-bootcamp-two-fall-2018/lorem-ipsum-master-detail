@@ -7,6 +7,11 @@
 <script>
 export default {
 
+  props: {
+    filter: Object,
+    types: Array,
+    sort: Object
+  }
 };
 </script>
 

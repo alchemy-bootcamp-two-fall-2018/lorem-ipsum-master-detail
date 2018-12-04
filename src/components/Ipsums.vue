@@ -1,34 +1,40 @@
 
 <template>
-    <!-- <div>
-        <IpsumList v-bind:ipsums="ipsums"/>
-    </div> -->
-
+  <div>
+    <IpsumDetail
+     :ipsum="selected"/>
     <ul>
-    <Ipsum v-for="ipsum in ipsums"
-    :key="ipsum.title"
-    :ipsum="ipsum"/>
+        <IpsumList
+        :onSelect="handleSelect"
+        :ipsums="ipsums"/>
     </ul>
-
+  </div>
 </template>
 
 <script>
 import ipsumsApi from '../services/IpsumApi.js';
-import Ipsum from './Ipsum';
+import IpsumDetail from './IpsumDetail.vue';
+import IpsumList from './IpsumList.vue';
 
 export default {
   data() {
     return {
-      ipsums: ipsumsApi.getAll()
+      ipsums: ipsumsApi.getAll(),
+      selected: null
     };
   },
-  components: {
-    Ipsum
+  components:{
+    IpsumDetail,
+    IpsumList 
+  },
+  methods: {
+    handleSelect(ipsum) {
+      this.selected = ipsum;
+    }
   }
 };
+
 </script>
 
-
 <style>
-
 </style>

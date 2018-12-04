@@ -1,28 +1,35 @@
 
 <template>
+  <div>
     <ul>
-        <IpsumItem v-for="ipsum in ipsums"
+        <Ipsum v-for="ipsum in ipsums"
+        @click.native="onSelect(ipsum)"
         v-bind:key="ipsum.title"
         v-bind:ipsum="ipsum"/>
     </ul>
+  </div>
 </template>
 
 <script>
-import IpsumItem from './IpsumItem.vue';
+import Ipsum from './Ipsum.vue';
 
 export default {
   data() {
     return {
-
-    };   
+      selected: null
+    };
+  },
+  props: {
+    onSelect: Function,
+    ipsums: Array
   },
   components:{
-    IpsumItem,    
-         
+    Ipsum    
   },
-
-  props: {
-    ipsums: Array
+  methods: {
+    handleSelect(ipsum) {
+      this.selected = ipsum;
+    }
   }
 };
 
