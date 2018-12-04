@@ -1,14 +1,6 @@
 <template>
   <section>
-    <div v-if="!show">
-      <button @click="show = true"> Add Ipsum</button>
-    </div>
-    <div v-else>
-      <h2>Add a new Ipsum</h2>
-      <IpsumForm v-show="true" v-bind:ipsum="ipsum"/>
-    </div>
-    <IpsumForm/>
-    <IpsumDetail/>
+    <IpsumDetail v-bind:ipsum="ipsum"/>
   </section>
 </template>
 

@@ -6,11 +6,13 @@
 </template>
 
 <script>
+import data from '../data.js';
 import Header from './components/Header.vue';
 import Ipsums from './components/Ipsums.vue';
 
 export default {
   name: 'app',
+   
   components: {
     Header,
     Ipsums

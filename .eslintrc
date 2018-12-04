@@ -18,6 +18,7 @@
     "indent": ["error", 2, { "SwitchCase": 1 }],
     "quotes": ["warn", "single"],
     "no-multi-spaces": ["error",
+      
       {
           "ignoreEOLComments": true
       }
@@ -51,6 +52,6 @@
         } 
       }
     ],
-    "array-bracket-spacing": "error"
+    "array-bracket-spacing": "error",
   }
 }
