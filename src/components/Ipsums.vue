@@ -1,10 +1,11 @@
 <template>
   <section>
+    <AddIpsum v-bind:onAdd="handleAdd"/>
     <IpsumList 
+      class="list"
       v-bind:ipsums="ipsums"
       v-bind:onSelect="handleSelect"/>
-    <AddIpsum />
-    <Ipsum />
+    <Ipsum v-bind:ipsum="selected"/>
   </section>
 </template>
 
@@ -29,6 +30,10 @@ export default {
     handleSelect(ipsum) {
       this.selected = ipsum;
       console.log('you selected an item');
+    },
+    handleAdd(ipsum) {
+      this.ipsums.push(ipsum);
+      this.handleSelect(ipsum);
     }
   }
 };
@@ -36,7 +41,10 @@ export default {
 
 <style>
   img {
-    width: 100%;
+    width: 50%;
     height: auto;
+    display: block;
+    margin: 10px;
+    padding: 10px;
   }
 </style>
