@@ -1,7 +1,6 @@
 <template>
     <header>
-        <h1>{{ pageTitle }}</h1>
-        <h2> Lorem Ipsum List</h2>
+        <h1> Lorem Ipsum List</h1>
         <img src="./bob-ross.jpg" alt="photo-of-bob-ross" class="pic"/>
     </header>
 </template>
@@ -11,7 +10,6 @@
 export default {
   data() {
     return {
-        pageTitle: 'Ipsum',
     };
   }
 };
@@ -23,7 +21,7 @@ header {
     color: rgb(167, 182, 31);
     padding: 10px;
     text-align: center;
-    border: 20px solid black
+    border: 20px solid black;
 }
 img {
     width: 80%;
