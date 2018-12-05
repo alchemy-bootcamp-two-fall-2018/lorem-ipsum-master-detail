@@ -11,7 +11,6 @@
 export default {
     props: {
         ipsum: Object,
-        onSelect: Function
     }
 };
 </script>

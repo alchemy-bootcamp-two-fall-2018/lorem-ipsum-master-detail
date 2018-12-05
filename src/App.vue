@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Header
+        :sort="sort"
         :filter="filter"
         :types="ipsumTypes"/>
     <Ipsums />
@@ -17,10 +18,14 @@ export default {
         return {
             ipsums: ipsumApi.getAll(),
             filter: {
-                title: '',
+                name: '',
                 category: ''
             },
-            selected: null
+            sort: {
+                field: '',
+                direction: 0
+            }
+            // selected: null
         };
     },
     components: {
@@ -39,11 +44,25 @@ export default {
         },
         filteredIpsums() {
             return this.ipsums.filter(ipsum => {
-                const hasTitle = !this.filter.title || ipsum.title.includes(this.filter.title);
-                return hasTitle;
+                const hasTitle = !this.filter.name || ipsum.title.includes(this.filter.name);
+                const hasCategory = !this.filter.category || ipsum.category.includes(this.filter.category);
+                return hasTitle && hasCategory;
+            });
+        },
+        sortedIpsums() {
+            const field = this.sort.field;
+            const direction = this.sort.direction;
+
+            return this.filteredIpsums.slice().sort((a, b) => {
+                if(a[field] > b[field]) {
+                    return 1 * direction;
+                }
+                if(a[field] < b[field]) {
+                    return -1 * direction;
+                }
+                return 0;
             });
         }
-
     }
 };
 </script>
