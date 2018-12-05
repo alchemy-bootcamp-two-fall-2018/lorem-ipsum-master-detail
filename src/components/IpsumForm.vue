@@ -50,4 +50,47 @@ export default {
 
 <style>
 
+ form {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+  button {
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 0.75em;
+  }
+  .button {
+    display: block;
+  }
+  span {
+    display: inline-block;
+  }
+  input, textarea {
+    height: 20px;
+    width: 13vw;
+  }
+  label {
+    display: flex;
+    padding: 5px;
+    font-size: 1.1em;
+    font-weight: 500;
+  }
+  @media only screen and (max-width: 1160px) {
+    form {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      margin-left: 5%;
+    }
+    span {
+      width: 90px;
+    }
+    input, textarea {
+    width: 60vw;
+    height: 20px;
+    }
+  }
 </style>

@@ -26,6 +26,7 @@ export default {
   components:{
     IpsumDetail,
     IpsumList 
+    
   },
   methods: {
     handleSelect(ipsum) {
@@ -37,4 +38,3 @@ export default {
 </script>
 
 <style>
-</style>

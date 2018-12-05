@@ -12,6 +12,7 @@ export default {
   props: {
     ipsum: Object
   },
+
 };
 </script>
 
