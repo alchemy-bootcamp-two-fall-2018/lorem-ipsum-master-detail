@@ -5,7 +5,6 @@
             :key="ipsum.title"
             :ipsum="ipsum"
         />
-        {{Ipsum}}
     </ul>
 </template>
 

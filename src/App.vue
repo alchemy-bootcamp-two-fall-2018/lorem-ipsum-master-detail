@@ -27,7 +27,7 @@ export default {
         Header,
         Ipsums
     },
-    computer: {
+    computed: {
         ipsumTypes() {
             const types = [];
             this.ipsums.forEach(ipsum => {
@@ -37,6 +37,12 @@ export default {
             });
             return types;
         },
+        filteredIpsums() {
+            return this.ipsums.filter(ipsum => {
+                const hasTitle = !this.filter.title || ipsum.title.includes(this.filter.title);
+                return hasTitle;
+            });
+        }
 
     }
 };
