@@ -1,17 +1,32 @@
 <template>
-  <div class="hello">
-    <h1>Ipsum Lab</h1>
-    
-  </div>
+  <header>
+    <label>
+      Title:
+      <input type="text" v-model="filter.title">
+    </label>
+    <label>
+      Category:
+      <select v-model="filter.type">
+        <option value="">All</option>
+        <option
+            v-for="type in types"
+            v-bind:key="type"
+            v-bind:value="type">
+            {{type}}
+        </option>
+      </select>
+    </label>
+  </header>
 </template>
 
 <script>
 export default {
-    
+    props: {
+        filter: Object
+    }
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
 </style>

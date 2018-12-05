@@ -1,4 +1,4 @@
-import ipsumList from '../data.js';
+import ipsumList from '../../data.js';
 
 const ipsumApi = {
     getAll() {

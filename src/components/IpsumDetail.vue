@@ -1,7 +1,6 @@
 <template>
-    <section>
-        <!-- <div v-if -->
-    </section>
+    <header>
+    </header>
 </template>
 
 <script>

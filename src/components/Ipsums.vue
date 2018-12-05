@@ -11,7 +11,7 @@
 
 <script>
 import Ipsum from './Ipsum.vue';
-import ipsumApi from '../../services/ipsumApi.js';
+import ipsumApi from '../services/ipsumApi.js';
 
 export default {
     data() {

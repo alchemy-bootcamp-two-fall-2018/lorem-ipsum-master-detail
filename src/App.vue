@@ -1,7 +1,8 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png" style="height:50px"/>
-    <Header />
+    <Header
+        :filter="filter"
+        :types="ipsumTypes"/>
     <Ipsums />
   </div>
 </template>
@@ -9,16 +10,34 @@
 <script>
 import Header from './components/Header.vue';
 import Ipsums from './components/Ipsums.vue';
+import ipsumApi from './services/ipsumApi';
 
 export default {
+    data() {
+        return {
+            ipsums: ipsumApi.getAll(),
+            filter: {
+                title: '',
+                category: ''
+            },
+            selected: null
+        };
+    },
     components: {
         Header,
         Ipsums
     },
-    methods: {
-        handleSelect(ipsum) {
-            this.selected = ipsum;
-        }
+    computer: {
+        ipsumTypes() {
+            const types = [];
+            this.ipsums.forEach(ipsum => {
+                if(!types.includes(ipsum.type)) {
+                    types.push(ipsum.type);
+                }
+            });
+            return types;
+        },
+
     }
 };
 </script>
