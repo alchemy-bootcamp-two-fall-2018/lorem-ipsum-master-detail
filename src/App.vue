@@ -31,8 +31,8 @@ export default {
         ipsumTypes() {
             const types = [];
             this.ipsums.forEach(ipsum => {
-                if(!types.includes(ipsum.type)) {
-                    types.push(ipsum.type);
+                if(!types.includes(ipsum.category)) {
+                    types.push(ipsum.category);
                 }
             });
             return types;

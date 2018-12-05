@@ -6,7 +6,7 @@
     </label>
     <label>
       Category:
-      <select v-model="filter.category">
+      <select v-model="filter.type">
         <option value="">All</option>
         <option
             v-for="type in types"

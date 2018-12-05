@@ -1,7 +1,6 @@
 <template>
     <ul>
         <Ipsum v-for="ipsum in ipsums"
-            @click.native="onSelect(ipsum)"
             :key="ipsum.title"
             :ipsum="ipsum"
         />
