@@ -28,8 +28,4 @@ ul {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   list-style-type: none;
 }
-
-.list {
-  border: 1px solid black;
-}
 </style>

@@ -1,5 +1,6 @@
 <template>
   <section>
+    <AddIpsum v-bind:onAdd="handleAdd"/>
     <IpsumList 
       v-bind:ipsums="ipsums"
       v-bind:onSelect="handleSelect"/>
@@ -9,6 +10,7 @@
 <script>
 import ipsumsApi from '../services/ipsumsApi';
 import IpsumList from './IpsumList.vue';
+import AddIpsum from './AddIpsum.vue';
 
 export default {
   data() {
@@ -18,7 +20,8 @@ export default {
     };
   },
   components: {
-    IpsumList
+    IpsumList, 
+    AddIpsum
   },
   methods: {
     handleSelect(ipsum) {
