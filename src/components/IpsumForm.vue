@@ -3,25 +3,23 @@
     <form @submit.prevent="onAdd(ipsum)">
       <label>
         <span>Name:</span>
-        <input v-model="ispsum.title" required>
+        <input v-model="ipsum.title" required>
       </label>
       <label>
         <span>Author:</span>
-        <input v-model="ispsum.author" required>
+        <input v-model="ipsum.author" required>
       </label>
       <label>
         <span>Category:</span>
-        <input v-model="ispsum.category" required>
+        <input v-model="ipsum.category" required>
       </label>
       <label>
         <span>Body:</span>
-        <textarea v-model="ispsum.body" required></textarea>
+        <textarea v-model="ipsum.body" required></textarea>
       </label>
 
-      <label class="button">
-        <button type="submit">Add</button>
-        <button @click="onCancel" type="button">Cancel</button>
-      </label>
+        <button @click="onAdd(ipsum)">Add</button>
+        <button @click="onCancel()" type="button">Cancel</button>
 
     </form>
   </section>
@@ -33,7 +31,9 @@ export default {
     return {
       ipsum: {
         title: '',
-        author: ''
+        author: '',
+        category: '',
+        body: ''
       }
     };
   },

@@ -6,7 +6,6 @@
 
 <script>
 import IpsumDetail from './IpsumDetail.vue';
-// import IpsumForm from './IpsumForm.vue';
 export default {
   data() {
     return {
@@ -18,14 +17,8 @@ export default {
     onAdd: Function
   },
   components: {
-    IpsumDetail,
-    // IpsumForm
-  
-  // methods: {
-  //   handleAdd(ipsum) {
-  //     this.show = false;
-  //     this.onAdd(ipsum);
-  //   }
+    IpsumDetail
+   
   }
 
 };

@@ -7,6 +7,7 @@
     <div v-else>
       <h2>Add New Ipsum</h2>
       <IpsumForm class="form"
+      
         :onAdd="handleAdd"
         :onCancel="() => show = false"/>
     </div>
@@ -14,7 +15,7 @@
 </template>
 
 <script>
-import IpsumForm from './IpsumForm';
+import IpsumForm from './IpsumForm.vue';
 export default {
   data() {
     return {
@@ -36,7 +37,7 @@ export default {
 };
 </script>
 
-<style lang="postcss" scoped>
+<style scoped>
 .form-section {
   background: #aaa;
   padding: 10px;

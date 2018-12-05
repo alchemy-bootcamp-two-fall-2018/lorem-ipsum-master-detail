@@ -1,7 +1,7 @@
 <template>
     <section v-if="ipsum" class="detail"> 
       <div class="top">
-        <h3> Ipsum Title {{ispum.title}} </h3>
+        <h3> Ipsum Title {{ipsum.title}} </h3>
         <p>Author: {{ipsum.author}} </p>
         <p>Category: {{ipsum.category}} </p>
       </div>
