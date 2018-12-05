@@ -2,7 +2,6 @@
   <div id="app">
     <Header/>
     <Ipsums/>
-    <Ipsum/>
   </div>
 </template>
 

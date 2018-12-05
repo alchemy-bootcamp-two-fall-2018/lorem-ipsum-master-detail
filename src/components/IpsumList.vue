@@ -1,22 +1,34 @@
 <template>
-    <li>
-      <div class="list">
-        <h3>{{ipsum.author}}</h3>
-        <p>{{ipsum.category}}</p>
-      </div>
-    </li>
+    <ul>
+      <IpsumItem
+        v-for="ipsum in ipsums"
+        @click.native="onSelect(ipsum)"
+        :key="ipsum.title"
+        :ipsum="ipsum"/>
+    </ul>
 </template>
 
 <script>
+import IpsumItem from './IpsumItem';
 
 export default {
   props: {
-    ipsum: Object
+    ipsums: Array,
+    onSelect: Function
+  },
+  components: {
+    IpsumItem
   }
 };
 </script>
 
 <style>
+ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  list-style-type: none;
+}
+
 .list {
   border: 1px solid black;
 }

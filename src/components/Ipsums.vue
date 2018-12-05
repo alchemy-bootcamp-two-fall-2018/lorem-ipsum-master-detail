@@ -1,9 +1,9 @@
 <template>
-  <ul>
-    <IpsumList v-for="ipsum in ipsums"
-      :key="ipsum.title"
-      :ipsum="ipsum"/>
-  </ul>
+  <section>
+    <IpsumList 
+      v-bind:ipsums="ipsums"
+      v-bind:onSelect="handleSelect"/>
+  </section>
 </template>
 
 <script>
@@ -14,18 +14,20 @@ export default {
   data() {
     return {
       ipsums: ipsumsApi.getIpsums(),
+      selected: null
     };
   },
   components: {
-    IpsumList,
-  }
+    IpsumList
+  },
+  methods: {
+    handleSelect(ipsum) {
+      this.selected = ipsum;
+    },
+  }  
 };
 </script>
 
 <style>
-ul {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  list-style-type: none;
-}
+
 </style>

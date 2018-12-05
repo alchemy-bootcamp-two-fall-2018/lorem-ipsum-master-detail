@@ -2,8 +2,8 @@
   <div class="ipsum">
     <header>
       <img alt="Ipsum Logo" src="https://goldisabetterway.com/wp-content/uploads/2018/08/004_lorem.jpg">
-    </header>
       <h1>What up Ipsum?!</h1>
+    </header>
   </div>
 </template>
 
