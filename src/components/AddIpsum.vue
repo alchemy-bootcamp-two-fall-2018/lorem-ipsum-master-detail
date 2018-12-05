@@ -1,6 +1,7 @@
 <template>
-  <section>
+  <section class="form-section">
     <div v-if="!show">
+      <p> Click to create new ipsum </p>
       <button @click="show = true">Add an Ipsum</button>
     </div>
     <div v-else>
@@ -36,9 +37,10 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-section {
+.form-section {
   background: #aaa;
   padding: 10px;
+  border: 4px black;
 }
 
 button {

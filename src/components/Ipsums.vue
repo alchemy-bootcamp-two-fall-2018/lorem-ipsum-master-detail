@@ -47,4 +47,8 @@ export default {
     margin: 10px;
     padding: 10px;
   }
+  section {
+    padding: 10px;
+    margin: 5px;
+  }
 </style>

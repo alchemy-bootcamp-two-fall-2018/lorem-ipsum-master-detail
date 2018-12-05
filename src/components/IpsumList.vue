@@ -2,7 +2,7 @@
   <ul>
     <IpsumItem
       v-for="ipsum in ipsums"
-      @click.native="onSelect"
+      @click.native="onSelect(ipsum)"
       :key="ipsum.title"
       :ipsum="ipsum"/>
   </ul>

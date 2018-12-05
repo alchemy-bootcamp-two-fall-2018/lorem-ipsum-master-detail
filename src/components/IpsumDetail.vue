@@ -4,10 +4,9 @@
         <h3> Ipsum Title {{ispum.title}} </h3>
         <p>Author: {{ipsum.author}} </p>
         <p>Category: {{ipsum.category}} </p>
-        <p>body:</p>
       </div>
     
-      <div class="body"><span>Filler Text Body Here,...</span>
+      <div class="body"><span>Filler Text Body Here.</span>
       <div v-html="ipsum.body" class="words"></div>
       </div>
     </section>
