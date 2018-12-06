@@ -1,14 +1,17 @@
 <template>
-   <IpsumList 
-   :ipsums="ipsums" 
-   :onSelect="handleSelect" 
-   :ipsum="selected" />
+   <ul>
+        <Ipsum v-for="ipsum in ipsums"
+            @click.native="onSelect(ipsum)"
+            :key="ipsum.name"
+            :ipsum="ipsum"
+            />
+    </ul>
+   
    
    </template>
 
 <script>
 import ipsumApi from '../services/ipsumApi';
-import IpsumList from './IpsumList';
 import Ipsum from './Ipsum.vue';
 
 export default {
@@ -25,7 +28,6 @@ export default {
     }
   },
   components: {
-    IpsumList,
     Ipsum
   }
 };
