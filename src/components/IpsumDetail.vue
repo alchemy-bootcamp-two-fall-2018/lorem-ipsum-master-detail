@@ -1,6 +1,8 @@
 <template>
-    <IpsumList
-    :ipsum="ipsum" />
+    <section>
+      <IpsumList
+      :ipsum="ipsum" />
+    </section>
 </template>
 
 <script>
@@ -8,7 +10,8 @@ import IpsumList from './IpsumList';
 
 export default {
   props: {
-    ipsum:Object
+    ipsum: Object,
+   
 
   },
   components: {

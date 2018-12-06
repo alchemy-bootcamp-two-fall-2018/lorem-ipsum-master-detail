@@ -6,6 +6,8 @@
     onSelect="handleSelect" />
     <IpsumDetail
     ipsum="selected" />
+    <AddIpsum 
+      :onAdd="handleAdd"/>
   </div>
 </template>
 
@@ -14,6 +16,7 @@ import Ipsums from './components/Ipsums';
 import Header from './components/Header';
 import ipsumApi from './services/ipsumApi';
 import IpsumDetail from './components/IpsumDetail';
+import AddIpsum from './components/AddIpsum.vue';
 
 export default {
   data() {
@@ -25,12 +28,17 @@ export default {
   methods: {
     handleSelect(ipsum) {
       this.selected = ipsum;
+    },
+    handleAdd(ipsum) {
+      this.ipsums.push(ipsum);
+      this.handleSelect(ipsum);
     }
   },
   components: {
     Header,
     Ipsums,
-    IpsumDetail
+    IpsumDetail,
+    AddIpsum
   }
 };
 </script>

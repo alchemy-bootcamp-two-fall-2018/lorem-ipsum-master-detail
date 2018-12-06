@@ -37,6 +37,7 @@ export default {
       ipsum: {
         title: '',
         category: '',
+        author:'',
         body:''
       }
     };

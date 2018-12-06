@@ -1,13 +1,15 @@
 <template>
-  <div v-if="ipsum">
+  <section v-if="ipsum">
     <h3>{{ipsum.title}}</h3>
-  </div>  
+    <div v-html="ipsum.body"></div>
+  </section>  
 </template>
 
 <script>
 export default {
   props: {
-    ipsum:Object
+    ipsum: Object,
+    onEdit: Function
   }
        
 };
