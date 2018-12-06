@@ -10,7 +10,6 @@
         <AddIpsum
         :onAdd="handleAdd"/>
 
-        <!-- :ipsumCategories="ipsumCategories"/> -->
     </div>
 </template>
 

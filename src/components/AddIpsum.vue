@@ -6,8 +6,7 @@
         <div v-else>
             <h2>Add a new Ipsum</h2>
             <IpsumForm
-                :ipsumTypes="ipsumTypes"
-                :onadd="handleAdd"/>
+                :onAdd="handleAdd"/>
         </div>
     </section>
 </template>
@@ -25,7 +24,6 @@ export default {
         IpsumForm
     },
     props: {
-        ipsumTypes: Array,
         onAdd: Function
     },
     methods: {

@@ -5,16 +5,8 @@
             <input v-model="ipsum.title" required>
         </label>
         <label>
-            <!-- <span>Category:</span>
-            <select v-model="ipsum.category" required>
-                <option value="" disabled>Select a Category</option>
-                <option 
-                v-for="category in ipsumCategories" 
-                v-bind:key="category"
-                v-bind:value="category">
-                {{category}}
-                </option>
-            </select> -->
+            <span>Category </span>
+            <input v-model="ipsum.category">
         </label>
         <label>
             <span>Published Date:</span>
@@ -26,7 +18,7 @@
         </label>
         <label>
             <span></span>
-            <button type="submit">{{ ipsumToUpdate ? 'Update':'Add'}}</button>
+            <button type="submit">Submit</button>
         </label>
     </form>
 </template>
@@ -34,21 +26,17 @@
 <script>
 export default {
     data() {
-        //components use date picker -install npm i datepicker and change it to match in template above
-        const update = this.ipsumToUpdate || {};
         return {
             ipsum: {
-                title: update.title || '',
-                // category: update.category || '',
-                publishedOn: update.publishedOn || ''
-                //publishedOn: update.publishedOn || null
+                title:'',
+                category:'',
+                publishedOn:'',
+                body:''
             }
         };
     },
     props: {
-        onAdd: Function,
-        ipsumToUpdate: Object
-        // ipsumCategories: Array
+        onAdd: Function
     }
 };
 </script>
