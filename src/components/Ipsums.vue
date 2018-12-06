@@ -1,31 +1,43 @@
 <template>
-  <ul>
-    <IpsumList v-for="ipsum in ipsums"
-      :key="ipsum.title"
-      :ipsum="ipsum"/>
-  </ul>
+  <section>
+    <AddIpsum v-bind:onAdd="handleAdd"/>
+    <IpsumList 
+      v-bind:ipsums="ipsums"
+      v-bind:onSelect="handleSelect"/>
+      <Ipsum v-bind:ipsum="selected"/>
+  </section>
 </template>
 
 <script>
 import ipsumsApi from '../services/ipsumsApi';
 import IpsumList from './IpsumList.vue';
+import AddIpsum from './AddIpsum.vue';
+import Ipsum from './Ipsum.vue';
 
 export default {
   data() {
     return {
       ipsums: ipsumsApi.getIpsums(),
+      selected: null
     };
   },
   components: {
-    IpsumList,
-  }
+    IpsumList, 
+    AddIpsum,
+    Ipsum
+  },
+  methods: {
+    handleSelect(ipsum) {
+      this.selected = ipsum;
+    },
+    handleAdd(ipsum) {
+      this.ipsums.push(ipsum);
+      this.handleSelect(ipsum);
+    }
+  }  
 };
 </script>
 
 <style>
-ul {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  list-style-type: none;
-}
+
 </style>
