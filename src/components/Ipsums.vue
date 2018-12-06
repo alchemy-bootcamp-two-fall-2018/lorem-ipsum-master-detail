@@ -1,12 +1,15 @@
 <template>
    <IpsumList 
-   :ipsums="ipsums" />
+   :ipsums="ipsums" 
+   :onSelect="handleSelect" 
+   :ipsum="selected" />
    
    </template>
 
 <script>
 import ipsumApi from '../services/ipsumApi';
 import IpsumList from './IpsumList';
+import Ipsum from './Ipsum.vue';
 
 export default {
   data() {
@@ -22,7 +25,8 @@ export default {
     }
   },
   components: {
-    IpsumList
+    IpsumList,
+    Ipsum
   }
 };
 </script>
