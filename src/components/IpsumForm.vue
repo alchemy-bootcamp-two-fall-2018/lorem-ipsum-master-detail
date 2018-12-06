@@ -14,7 +14,7 @@
         </label>
         <label>
             <span>Website:</span>
-            <input type="url" nv-model="ipsum.authorUrl" required>
+            <input type="test" v-model="ipsum.authorUrl" required>
         </label>
         <label>
             <span>Publication Date:</span>
