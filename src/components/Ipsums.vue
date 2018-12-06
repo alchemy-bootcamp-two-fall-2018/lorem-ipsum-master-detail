@@ -15,6 +15,10 @@ import ipsumApi from '../services/ipsumApi';
 import Ipsum from './Ipsum.vue';
 
 export default {
+  props: {
+    ipsums: Array,
+    onSelect: Function
+  },
   data() {
     return {
       ipsums: ipsumApi.getData(),

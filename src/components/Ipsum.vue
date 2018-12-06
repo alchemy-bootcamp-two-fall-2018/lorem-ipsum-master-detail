@@ -8,7 +8,6 @@
               <p>{{ipsum.author}}</p>
           </div>
       </li>
-      <IpsumDetail />
     </div>
 </template>
 
@@ -17,8 +16,7 @@
 export default {
   props: {
     ipsum: Object,
-    onSelect: Function
-  }
+  }  
 };
 </script>
 
