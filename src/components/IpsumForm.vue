@@ -9,7 +9,7 @@
       <input v-model="ipsum.author" required>
     </label>
     <label>
-      <span>Size:</span>
+      <span>Author URL:</span>
       <input v-model="ipsum.authorUrl" required>
     </label>
     <label>

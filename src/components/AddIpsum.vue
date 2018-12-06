@@ -37,19 +37,6 @@ export default {
 };
 </script>
 
-<style lang="postcss" scoped>
-section {
-  background: #aaa;
-  padding: 10px;
-}
+<style>
 
-button {
-  border: 2px red;
-  margin: 4px;
-  font-size: 1em;
-}
-.form {
-  margin: auto;
-  padding: 2px;
-}
 </style>
