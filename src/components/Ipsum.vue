@@ -1,5 +1,4 @@
 <template>
-    <div>
       <li>
           <div class="info">
               <!-- <a href="{{ipsum.authorUrl}}" target="_blank"><h3>{{ipsum.title}}</h3></a> -->
@@ -8,7 +7,6 @@
               <p>{{ipsum.author}}</p>
           </div>
       </li>
-    </div>
 </template>
 
 <script>

@@ -1,25 +1,37 @@
 <template>
   <div id="app">
-    <Header 
-    />
-    <Ipsums  
-    
-    />
+    <Header/>
+    <Ipsums
+    :ipsums="ipsums"
+    onSelect="handleSelect" />
+    <IpsumDetail
+    ipsum="selected" />
   </div>
 </template>
 
 <script>
 import Ipsums from './components/Ipsums';
 import Header from './components/Header';
+import ipsumApi from './services/ipsumApi';
+import IpsumDetail from './components/IpsumDetail';
 
 export default {
-  name: 'app',
+  data() {
+    return {
+      ipsums: ipsumApi.getData(),
+      selected: null,
+    };
+  },
+  methods: {
+    handleSelect(ipsum) {
+      this.selected = ipsum;
+    }
+  },
   components: {
     Header,
-    Ipsums
-    
+    Ipsums,
+    IpsumDetail
   }
-  
 };
 </script>
 
