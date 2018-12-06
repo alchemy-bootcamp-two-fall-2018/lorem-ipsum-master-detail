@@ -11,7 +11,6 @@
    </template>
 
 <script>
-import ipsumApi from '../services/ipsumApi';
 import Ipsum from './Ipsum.vue';
 
 export default {
@@ -19,18 +18,7 @@ export default {
     ipsums: Array,
     onSelect: Function
   },
-  data() {
-    return {
-      ipsums: ipsumApi.getData(),
-      selected: null,
-    };
-  },
-  methods: {
-    handleSelect(ipsum) {
-      this.selected(ipsum);
-      console.log(this.selected(ipsum));
-    }
-  },
+  
   components: {
     Ipsum
   }

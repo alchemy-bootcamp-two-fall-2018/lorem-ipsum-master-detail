@@ -1,5 +1,24 @@
 <template>
-     
+     <div v-if="ipsum">
+       <h3>{{ipsum.title}</h3>
+       
+         
+       </template>
+       
+<script>
+export default {
+  props: {
+    ipsum:Object
+  }
+       
+};
+</script>
+       
+       <style>
+       
+       </style>
+       
+      </div>
 </template>
 
 <script>
