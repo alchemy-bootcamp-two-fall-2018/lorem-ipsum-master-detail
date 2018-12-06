@@ -30,8 +30,9 @@ export default {
   },
   methods: {
     handleAdd(ipsum) {
-      this.show = false;
+      console.log('xyz');
       this.onAdd(ipsum);
+      this.show = false;
     }
   }
 };

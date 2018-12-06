@@ -1,7 +1,15 @@
-import ipsumsApi from '../../data.js';
+import ipsumData from '../../data.js';
 
 export default {
   getAll() {
-    return ipsumsApi;
+    return ipsumData;
+  },
+  addIpsum(ipsum) {
+    ipsum.title = '',
+    ipsum.author = '',
+    ipsum.authorURL = '',
+    ipsum.body = '',
+    ipsumData.push(ipsum);
+    return ipsum;
   }
 };

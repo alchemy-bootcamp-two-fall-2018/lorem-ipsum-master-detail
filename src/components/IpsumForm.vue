@@ -1,8 +1,8 @@
 <template>
   <form @submit.prevent="onAdd(ipsum)">
     <label>
-      <span>Name:</span>
-      <input v-model="ipsum.name" required>
+      <span>Title:</span>
+      <input v-model="ipsum.title" required>
     </label>
     <label>
       <span>Author:</span>
@@ -40,10 +40,9 @@ export default {
   },
 
   props: {
-    animalTypes: Array,
     onAdd: Function,
     onCancel: Function,
-    animalToUpdate: Object
+    ipsumToUpdate: Object
   },
 };
 </script>

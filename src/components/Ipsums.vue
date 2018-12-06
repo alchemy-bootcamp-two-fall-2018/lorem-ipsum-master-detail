@@ -2,11 +2,11 @@
 <template>
   <div>
     <IpsumDetail
+     v-if="selected"
      :ipsum="selected"/>
     <ul>
         <AddIpsum
-        :onAdd="handleAdd"
-        :animalTypes="animalTypes"/>
+        :onAdd="handleAdd"/>
         <IpsumList
         :onSelect="handleSelect"
         :ipsums="ipsums"/>
@@ -38,6 +38,7 @@ export default {
       this.selected = ipsum;
     },
     handleAdd(ipsum) {
+      console.log('banana', this.ipsums);
       this.ipsums.push(ipsum);
       this.handleSelect(ipsum);
     }
