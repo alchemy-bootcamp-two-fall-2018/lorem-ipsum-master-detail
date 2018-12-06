@@ -1,11 +1,26 @@
 <template>
-    <header>
-    </header>
+    <section>
+        <IpsumViewer
+            v-if="!edit"
+            :ipsum="ipsum" />
+    </section>
 </template>
 
 <script>
-export default {
+import IpsumViewer from './IpsumViewer.vue';
 
+export default {
+    data() {
+        return {
+            edit: false
+        };
+    },
+    props: {
+        ipsum: Object
+    },
+    components: {
+        IpsumViewer
+    }
 };
 </script>
 
