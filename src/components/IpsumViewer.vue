@@ -17,6 +17,9 @@ export default {
 };
 </script>
 
-<style>
-
+<style scoped lang="postcss">
+section {
+  padding: 10px;
+  color: white;
+}
 </style>

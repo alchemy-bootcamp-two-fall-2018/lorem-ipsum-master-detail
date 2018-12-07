@@ -21,16 +21,16 @@ export default {
     props: {
         ipsum: Object,
         selected: Object,
-        // onSelect: Function
+        onSelect: Function
     },
     components: {
         Ipsum
-    },
-    methods: {
-        onSelect() {
-            console.log('Clicked!');
-        }
     }
+    // methods: {
+    //     onSelect() {
+    //         console.log('Clicked!');
+    //     }
+    // }
 };
 </script>
 

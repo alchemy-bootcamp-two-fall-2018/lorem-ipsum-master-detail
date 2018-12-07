@@ -1,69 +1,47 @@
 <template>
   <div id="app">
-    <!-- <Header
-        :sort="sort"
-        :filter="filter"
-        :types="ipsumTypes"/> -->
-    <Ipsums />
+      <AddIpsum
+        :onAdd="handleAdd" />
+
+    <Ipsums
+        :onSelect="handleSelect" />
+
+    <IpsumDetail
+        :onEdit="handleEdit"
+        :ipsum="selected" />
   </div>
 </template>
 
 <script>
-// import Header from './components/Header.vue';
 import Ipsums from './components/Ipsums.vue';
 import ipsumApi from './services/ipsumApi';
+import IpsumDetail from './components/IpsumDetail.vue';
+import AddIpsum from './components/AddIpsum.vue';
 
 export default {
     data() {
         return {
             ipsums: ipsumApi.getAll(),
-            // filter: {
-            //     name: '',
-            //     category: ''
-            // },
-            // sort: {
-            //     field: '',
-            //     direction: 0
-            // }
-            // selected: null
+            selected: null
         };
     },
     components: {
-        // Header,
-        Ipsums
+        Ipsums,
+        IpsumDetail,
+        AddIpsum
     },
-    // computed: {
-        // ipsumTypes() {
-        //     const types = [];
-        //     this.ipsums.forEach(ipsum => {
-        //         if(!types.includes(ipsum.category)) {
-        //             types.push(ipsum.category);
-        //         }
-        //     });
-        //     return types;
-        // },
-        // filteredIpsums() {
-        //     return this.ipsums.filter(ipsum => {
-        //         const hasTitle = !this.filter.name || ipsum.title.includes(this.filter.name);
-        //         const hasCategory = !this.filter.category || ipsum.category.includes(this.filter.category);
-        //         return hasTitle && hasCategory;
-        //     });
-        // },
-        // sortedIpsums() {
-        //     const field = this.sort.field;
-        //     const direction = this.sort.direction;
-
-        //     return this.filteredIpsums.slice().sort((a, b) => {
-        //         if(a[field] > b[field]) {
-        //             return 1 * direction;
-        //         }
-        //         if(a[field] < b[field]) {
-        //             return -1 * direction;
-        //         }
-        //         return 0;
-        //     });
-        // }
-    // }
+    handleSelect(ipsum) {
+        this.selected = ipsum;
+    },
+    handleAdd(ipsum) {
+        this.ipsums.push(ipsum);
+        this.handleSelect(ipsum);
+    },
+    handleEdit(old, ipsum) {
+        const index = this.ipsums.indexOf(old);
+        this.ipsums.splice(index, 1, ipsum);
+        this.handleSelect(ipsum);
+    }
 };
 </script>
 

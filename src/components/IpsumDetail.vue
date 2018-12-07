@@ -3,6 +3,7 @@
         <IpsumViewer
             v-if="!edit"
             :ipsum="ipsum" />
+        {{ipsum}}
     </section>
 </template>
 
