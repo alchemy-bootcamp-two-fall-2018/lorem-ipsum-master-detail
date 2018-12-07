@@ -6,7 +6,7 @@
         <IpsumsList
         :Ipsums="data"
         :onSelect="handleSelect"
-        :selected="selected"/> 
+        /> 
         <Ipsum
         :selected="selected"
         />
@@ -41,11 +41,10 @@ export default {
         handleSelect(ipsum) {
             this.selected = ipsum === this.selected ? null : ipsum;
             console.log('you have selected', ipsum);
-
         },
         handleAdd(ipsum) {
-            dataApi.addIpsum(ipsum);
-            this.data = dataApi.getData();
+            //dataApi.addIpsum(ipsum);
+            this.data.push(ipsum);
             console.log('you have added', ipsum);
         }, 
     },

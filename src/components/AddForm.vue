@@ -7,28 +7,23 @@
             <label> Author:
                 <input v-model="data.author">
             </label>
-        <button type="button" @click.prevent="onAdd(data)"> Add </button>
-
+            <button> Add </button>
         </form>
-        
     </div>
 </template>
 
 <script>
 export default {
     data() {
-        const update = this.dataToUpdate || {};
         return {
             data: {
-                title: update.title || '',
-                author: update.author || '',
-
+                title: '',
+                author: ''
             }
         };
     },
     props: {
         onAdd: Function, 
-        dataToUpdate: Object
     }
 
 };
