@@ -2,22 +2,22 @@
   <section>
     <form @submit.prevent="onAdd(ipsum)">
       <label>
-        Name:
+        <span>Title:</span>
         <input v-model="ipsum.title" required>
       </label>
 
       <label>
-        Author:
+        <span>Author:</span>
         <input v-model="ipsum.author" required>
       </label>
 
       <label>
-        Category:
+        <span>Category:</span>
         <input v-model="ipsum.category" required>
       </label>
 
       <label>
-        Body:
+        <span>Body:</span>
         <textarea v-model="ipsum.body" required></textarea>
       </label>
 
@@ -47,5 +47,7 @@ export default {
 </script>
 
 <style>
-
+textarea {
+  height: 20px;
+}
 </style>
