@@ -5,9 +5,9 @@ export default {
         return data;
     }, 
     addIpsum(ipsum) {
-        ipsum.title = '',
-        ipsum.author = '',
-        data.push(ipsum);
+        // ipsum.title = '',
+        // ipsum.author = '',
+        // data.push(ipsum);
         return ipsum;
     }
 };
