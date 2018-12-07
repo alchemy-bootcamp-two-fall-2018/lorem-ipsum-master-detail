@@ -29,8 +29,6 @@ export default {
   methods: {
     handleSelect(ipsum) {
       this.selected = ipsum;
-      console.log('you selected an item');
-
     },
     handleAdd(ipsum) {
       this.ipsums.push(ipsum);
