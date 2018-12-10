@@ -1,9 +1,5 @@
 <template>
-    <div v-if="add">
-        <IpsumForm onAdd="handleAdd"/>
-    </div>
-    <div v-else>
-        <button @click="add=true" >Add an Ipsum!</button> 
+    <div>
         <IpsumDetail
         :ipsum="ipsum"/>   
     </div>
@@ -11,7 +7,6 @@
 
 <script>
 import IpsumDetail from './IpsumDetail.vue';
-import IpsumForm from './IpsumForm.vue';
 
 export default {
   data() {
@@ -20,15 +15,15 @@ export default {
     };
   },
   components: {
-    IpsumDetail,
-    IpsumForm
+    IpsumDetail
   },
   props: {
-    ipsum: Object
+    ipsum: Object,
+    onAdd: Function
   },
   methods: {
-    handleAdd(ipsum) {
-      this.ipsumdata.push(ipsum);
+    handleSelect(ipsum) {
+      this.selected = ipsum;
     }
   }
 };
